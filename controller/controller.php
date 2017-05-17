@@ -6,26 +6,30 @@
    * Description: Controller for jmccoy.greenrivertech.net/328/blogs
    */
   
+  //set the debug level
+  error_reporting('E_ALL');
+  
   //require the autoload file
   require_once("vendor/autoload.php");
   
-  //start the session in case we need it
+  //start the session
   session_start();
   
   //Create an instance of the Base class
   $f3 = Base::instance();
   
-  //set the debug level
-  $f3->set('DEBUG', 3);
+  //set some session variables
+  $f3->set('guest', true);
   
   //declare and instantiate the database model
 //TODO: database connection after model is created.
 
   //Define a default route
   $f3->route('GET /', function() {
+    
     $view = new View;
     echo $view->render
-      ('view/home.html');
+      ('view/home.php');
   });
   
   //define additional routes
