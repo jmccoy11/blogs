@@ -1,4 +1,4 @@
-<div id="navbar" class="col-sm-2">
+<div id="navbar" class="">
   <nav>
     <h2>Blog Site</h2>
     <img src="images/trumpet.png" alt="trumpet.png" />
