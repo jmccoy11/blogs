@@ -19,17 +19,15 @@
   $f3 = Base::instance();
   
   //set some session variables
-  $f3->set('guest', true);
+  $f3->set('guest', false);
   
   //declare and instantiate the database model
 //TODO: database connection after model is created.
 
   //Define a default route
-  $f3->route('GET /', function() {
+  $f3->route('GET /', function($f3) {
     
-    $view = new View;
-    echo $view->render
-      ('view/home.php');
+    echo Template::instance()->render('view/home.php');
   });
   
   //define additional routes

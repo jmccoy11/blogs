@@ -34,6 +34,6 @@
     
   </head>
   <body>
-    <include href="includes/navbar.inc.html" />
+    <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
   </body>
 </html>

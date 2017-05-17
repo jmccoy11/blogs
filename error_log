@@ -48,3 +48,113 @@
 [17-May-2017 15:47:46 America/Chicago] HTTP 404 (GET /styles/styles.css)
 [17-May-2017 15:47:46 America/Chicago] [328/blogs/controller/controller.php:38] Base->run()
 [17-May-2017 15:47:46 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:17:24 America/Chicago] Unable to open view/home.html
+[17-May-2017 16:17:24 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:17:24 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:17:24 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:19:20 America/Chicago] syntax error, unexpected '.', expecting end of file [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37]
+[17-May-2017 16:19:20 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:19:20 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:19:20 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:19:44 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:19:44 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:19:44 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:19:44 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:19:44 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:19:44 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:20:02 America/Chicago] include(../includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:20:02 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:20:02 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:20:02 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:20:02 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:20:02 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:20:26 America/Chicago] include(/includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:20:26 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:20:26 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:20:26 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:20:26 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:20:26 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:20:32 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:20:32 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:20:32 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:20:32 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:20:32 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:20:32 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:25:53 America/Chicago] syntax error, unexpected '.', expecting end of file [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37]
+[17-May-2017 16:25:53 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:25:53 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:25:53 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:26:23 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:26:23 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:26:23 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:26:23 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:26:23 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:26:23 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:27:00 America/Chicago] Division by zero
+[17-May-2017 16:27:00 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:27:00 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:27:00 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:27:00 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:27:12 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:27:12 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:27:12 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:27:12 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:27:12 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:27:12 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:30:25 America/Chicago] syntax error, unexpected '>' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37]
+[17-May-2017 16:30:25 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:30:25 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:30:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:30:32 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:30:32 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:30:32 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:30:32 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:30:32 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:30:32 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:30:46 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:30:46 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:30:46 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:30:46 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:30:46 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:30:46 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:31:12 America/Chicago] include(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+[17-May-2017 16:31:12 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:31:12 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:31:12 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:31:12 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:31:12 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:31:26 America/Chicago] include(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+[17-May-2017 16:31:26 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:31:26 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:31:26 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:31:26 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:31:26 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:31:42 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:31:42 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:31:42 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:31:42 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:31:42 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:31:42 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:31:55 America/Chicago] include(navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:31:55 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:31:55 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:31:55 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:31:55 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:31:55 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 16:32:00 America/Chicago] include(includes/navbar.inc.html
+): failed to open stream: No such file or directory
+[17-May-2017 16:32:00 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] Base->{closure}()
+[17-May-2017 16:32:00 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:37] include()
+[17-May-2017 16:32:00 America/Chicago] [328/blogs/controller/controller.php:30] Preview->render()
+[17-May-2017 16:32:00 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
+[17-May-2017 16:32:00 America/Chicago] [328/blogs/index.php:3] require_once()
