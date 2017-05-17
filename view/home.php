@@ -34,6 +34,53 @@
     
   </head>
   <body>
-    <include href="includes/navbar.inc.html" />
+      <include href="includes/navbar.inc.html" />
+    
+      <div id="blogger-cards" class="col-xs-10">
+        <div class="card col-xs-3">
+          <img src="images/user.png" />
+          <hr />
+          <span><a href="#">view blogs</a></span>
+          <hr />
+          <p>Something from my latest blog:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
+        </div>
+        
+        <div class="card col-xs-3">
+          <img src="images/user.png" />
+          <hr />
+          <span><a href="#">view blogs</a></span>
+          <hr />
+          <p>Something from my latest blog:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
+        </div>
+        
+        <div class="card col-xs-3">
+          <img src="images/user.png" />
+          <hr />
+          <span><a href="#">view blogs</a></span>
+          <hr />
+          <p>Something from my latest blog:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
+        </div>
+      </div>
   </body>
 </html>

@@ -1,12 +1,17 @@
 
+/* Variables */
+  :root {
+    --grey: #d3d3d3;
+  }
+  
 /* Navbar */
 
   #navbar {
     width: 15%;
     height: 100%;
-    background: #d3d3d3;
-    position: absolute;
+    background-color: var(--grey);
     float: left;
+    position: relative;
   }
   
   nav {
@@ -28,4 +33,15 @@
   nav li {
     font-weight: bold;
   }
+
+/* Blogger card styles */
+
+  .card {
+    width = 33%;
+    background: var(--grey);
+    margin: 1em;
+  }
   
+  .card img {
+    width:100%;
+  }

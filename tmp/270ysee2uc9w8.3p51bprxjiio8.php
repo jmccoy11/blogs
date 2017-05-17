@@ -1,4 +1,4 @@
-<div id="navbar">
+<div id="navbar" class="col-sm-2">
   <nav>
     <h2>Blog Site</h2>
     <img src="images/trumpet.png" alt="trumpet.png" />
@@ -17,4 +17,4 @@
       <li><a href="#">Login ></a></li>
     </ul>
   </nav>
-</div>
+</div> <!-- navbar -->
