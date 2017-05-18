@@ -3,7 +3,7 @@
     <h2>Blog Site</h2>
     <img src="images/trumpet.png" alt="trumpet.png" />
     <ul>
-      <li><a href="/home">Home ></a></li>
+      <li><a href="/328/blogs">Home ></a></li>
       <?php if ($guest): ?>
         
           <li><a href="#">My Blogs ></a></li>

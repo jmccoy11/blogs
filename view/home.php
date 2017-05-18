@@ -35,18 +35,19 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="col-xs-2">
+    <div class="col-md-2 col-xs-12">
       <include href="includes/navbar.inc.html" />
     </div>
     
     <!-- Blog cards -->
-    <div id="blogger-container" class="row col-xs-10"> <!-- separates cards from nav --> 
-      <div class="card-box col-xs-4"> <!-- card outer boxes to add margins -->
+    <div id="blogger-container" class="row col-md-10 col-xs-12"> <!-- separates cards from nav --> 
+      <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
         <div class="card"> <!-- card inner boxes -->
           <img src="images/user.png" />
           <p class="center">Joe Shmoe Blogger</span>
           
-          <p class="cell"><a href="#">view blogs</a></p>
+          <p class="cell"><a href="#">view blogs</a>
+            <span class="pull-right">Total: 10</span></p>
           
           <p>Something from my latest blog:</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
@@ -59,12 +60,14 @@
         </div> <!-- card -->
       </div> <!-- card box -->
       
-      <div class="card-box col-xs-4">
+      <div class="card-box col-md-4 col-sm-6">
         <div class="card">
           <img src="images/user.png" />
           <p class="center">Joe Shmoe Blogger</p>
           
-          <p class="cell"><a href="#">view blogs</a></p>
+          <p class="cell"><a href="#">view blogs</a>
+            <span class="pull-right">Total: 10</span></p>
+          
           
           <p>Something from my latest blog:</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
@@ -77,12 +80,13 @@
         </div> <!-- card -->
       </div> <!-- card box -->
       
-      <div class="card-box col-xs-4">
+      <div class="card-box col-md-4">
         <div class="card">
           <img src="images/user.png" />
           <p class="center">Joe Shmoe Blogger</p>
           
-          <p class="cell"><a href="#">view blogs</a></p>
+          <p class="cell"><a href="#">view blogs</a>
+            <span class="pull-right">Total: 10</span></p>
           
           <p>Something from my latest blog:</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
