@@ -1,0 +1,43 @@
+/* User styles */
+
+  #user-container {
+    margin: 1em 0 1em 0;
+    padding: 0 1em 1em 1em;
+  }
+  
+  h1 {
+    text-align: center;
+    background: var(--grey);
+    margin: 0 15px 15px 15px;;
+    padding: 0;
+  }
+  
+  #user-container img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 100%;
+  }
+  
+  #most-recent {
+    background: var(--grey);
+    margin: 0 0 15px 0;
+    padding: 5px 1em;
+  }
+  
+  #my-blogs {
+    background: var(--grey);
+    margin: 0 0 15px 0;
+    padding: 5px 1em;
+  }
+  
+  #bio {
+    background: var(--grey);
+    margin: 0 0 15px 0;
+    padding: 5px 1em;
+    height: 100%;
+  }
+  
+  #bio h3 {
+    padding: 0;
+    margin: 0;
+  }

@@ -1,0 +1,24 @@
+
+/* Blogger card styles */
+
+  #blogger-container {
+    padding: 0 2em;
+  }
+  
+  .card-box {
+    padding: 0 1em;
+    margin: 1em 0 1em 0;
+  }
+  
+  .card {
+    padding: 1em;
+    background: var(--grey);
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .blog-count {
+    text-align: right;
+  }

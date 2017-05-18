@@ -167,3 +167,12 @@
 [17-May-2017 16:43:48 America/Chicago] HTTP 404 (GET /user.png)
 [17-May-2017 16:43:48 America/Chicago] [328/blogs/controller/controller.php:36] Base->run()
 [17-May-2017 16:43:48 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 20:22:25 America/Chicago] syntax error, unexpected ')' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.1s33lx129wxjx.php:44]
+[17-May-2017 20:22:25 America/Chicago] [328/blogs/controller/controller.php:33] Preview->render()
+[17-May-2017 20:22:25 America/Chicago] [328/blogs/controller/controller.php:39] Base->run()
+[17-May-2017 20:22:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[17-May-2017 20:45:47 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 44
+[17-May-2017 21:01:50 America/Chicago] PHP Parse error:  syntax error, unexpected '$f3' (T_VARIABLE) in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 56
+[17-May-2017 21:07:44 America/Chicago] HTTP 404 (GET /user?id=1)
+[17-May-2017 21:07:44 America/Chicago] [328/blogs/controller/controller.php:58] Base->run()
+[17-May-2017 21:07:44 America/Chicago] [328/blogs/index.php:3] require_once()

@@ -1,20 +1,22 @@
-<div id="navbar" class="">
-  <nav>
-    <h2>Blog Site</h2>
-    <img src="images/trumpet.png" alt="trumpet.png" />
-    <ul>
-      <li><a href="/328/blogs">Home ></a></li>
-      <check if="{{ @guest }}">
-        <true>
-          <li><a href="#">My Blogs ></a></li>
-          <li><a href="#">Create Blog ></a></li>
-        </true>
-        <false>
-          <li><a href="#">Become a Blogger ></a></li>
-        </false>
-      </check>
-      <li><a href="#">About Us ></a></li>
-      <li><a href="#">Login ></a></li>
-    </ul>
-  </nav>
-</div> <!-- navbar -->
+<div class="col-md-2 col-xs-12">
+  <div id="navbar" class="">
+    <nav>
+      <h2>Blog Site</h2>
+      <img src="images/trumpet.png" alt="trumpet.png" />
+      <ul>
+        <li><a href="/328/blogs">Home ></a></li>
+        <check if="{{ @guest }}">
+          <true>
+            <li><a href="#">My Blogs ></a></li>
+            <li><a href="#">Create Blog ></a></li>
+          </true>
+          <false>
+            <li><a href="#">Become a Blogger ></a></li>
+          </false>
+        </check>
+        <li><a href="#">About Us ></a></li>
+        <li><a href="#">Login ></a></li>
+      </ul>
+    </nav>
+  </div> <!-- navbar -->
+</div>

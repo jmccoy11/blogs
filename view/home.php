@@ -26,6 +26,7 @@
     
     <!--Custom stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
     
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -35,69 +36,29 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="col-md-2 col-xs-12">
-      <include href="includes/navbar.inc.html" />
-    </div>
+    <include href="includes/navbar.inc.html" />
     
     <!-- Blog cards -->
     <div id="blogger-container" class="row col-md-10 col-xs-12"> <!-- separates cards from nav --> 
-      <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
-        <div class="card"> <!-- card inner boxes -->
-          <img src="images/user.png" />
-          <p class="center">Joe Shmoe Blogger</span>
-          
-          <p class="cell"><a href="#">view blogs</a>
-            <span class="pull-right">Total: 10</span></p>
-          
-          <p>Something from my latest blog:</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
-          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
-          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
-          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
-        </div> <!-- card -->
-      </div> <!-- card box -->
       
-      <div class="card-box col-md-4 col-sm-6">
-        <div class="card">
-          <img src="images/user.png" />
-          <p class="center">Joe Shmoe Blogger</p>
+      <!-- THIS WILL NEED TO BE CHANGED TO LOOP THROUGH THE ARRAY RECIEVED BY THE DATABASE -->
+      <loop from="{{ @i = 0 }}" to="{{ @i < 6 }}" step="{{ @i++ }}">
+        <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
+          <div class="card"> <!-- card inner boxes -->
           
-          <p class="cell"><a href="#">view blogs</a>
-            <span class="pull-right">Total: 10</span></p>
-          
-          
-          <p>Something from my latest blog:</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
-          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
-          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
-          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
-        </div> <!-- card -->
-      </div> <!-- card box -->
-      
-      <div class="card-box col-md-4">
-        <div class="card">
-          <img src="images/user.png" />
-          <p class="center">Joe Shmoe Blogger</p>
-          
-          <p class="cell"><a href="#">view blogs</a>
-            <span class="pull-right">Total: 10</span></p>
-          
-          <p>Something from my latest blog:</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
-          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
-          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
-          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
-        </div> <!-- card -->
-      </div> <!-- card-box -->
+            <img src="{{ @loop['profilePic'] }}" />
+            <p class="center">{{ @loop['name'] }}</p>
+            
+            <p class="top-bottom-border"><a href="/328/blogs/user?id={{ @loop['id'] }}">view blogs</a>
+              <span class="pull-right">Total: {{ @loop['postsCount'] }}</span></p>
+            
+            <p>Something from my latest blog:</p>
+            <p>{{ @loop['latestPost'] }}</p>
+            
+          </div> <!-- card -->
+        </div> <!-- card box -->
+      </loop>
     </div> <!-- blogger-container -->
+    
   </body>
 </html>

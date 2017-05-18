@@ -10,8 +10,10 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-<!-- implement this
+    
+<!-- TODO: implement this
     <link rel="shortcut icon" href="images/heart-icon.png"> -->
+
     <title>The Blog Site</title>
     <meta name="description" content="A blogging site for Green River College class IT328">
     <meta name="author" content="Jonnathon McCoy">
@@ -26,7 +28,7 @@
     
     <!--Custom stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/user.css">
     
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -38,27 +40,47 @@
     <!-- Navbar -->
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
-    <!-- Blog cards -->
-    <div id="blogger-container" class="row col-md-10 col-xs-12"> <!-- separates cards from nav --> 
+    <div id="user-container" class="row col-md-10 col-xs-12">
+      <h1><?= $user['name'] ?>'s Blogs</h1>
       
-      <!-- THIS WILL NEED TO BE CHANGED TO LOOP THROUGH THE ARRAY RECIEVED BY THE DATABASE -->
-      <?php for ($i = 0;$i < 6;$i++): ?>
-        <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
-          <div class="card"> <!-- card inner boxes -->
+      <div class="col-md-8">
+        <div id="most-recent">
+          <p>My most recent blog:</p>
+          <p><?= $user['latestPost'] ?></p>
+        </div>
+      
+        <div id="my-blogs">
+          <p class="bottom-border">My Blogs:</p>
           
-            <img src="<?= $loop['profilePic'] ?>" />
-            <p class="center"><?= $loop['name'] ?></p>
-            
-            <p class="top-bottom-border"><a href="/328/blogs/user?id=<?= $loop['id'] ?>">view blogs</a>
-              <span class="pull-right">Total: <?= $loop['postsCount'] ?></span></p>
-            
-            <p>Something from my latest blog:</p>
-            <p><?= $loop['latestPost'] ?></p>
-            
-          </div> <!-- card -->
-        </div> <!-- card box -->
-      <?php endfor; ?>
-    </div> <!-- blogger-container -->
-    
+          <div class="bottom-border">
+            <p>In the words of Abraham Lincoln - word count: 716 - 12/02/2007</p>
+            <p><?= $user['latestPost'] ?></p>
+          </div>
+          
+          <div class="bottom-border">
+            <p>Renovating my house - word count: 202 - 09/10/2007</p>
+            <p><?= $user['latestPost'] ?></p>
+          </div>
+          
+          <div class="bottom-border">
+            <p>The Mariners are losing again - word count: 998 - 05/04/2007</p>
+            <p><?= $user['latestPost'] ?></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div id="profilePic">
+          <img src="<?= $user['profilePic'] ?>" alt="profile pic" />
+        </div>
+        
+        <div id="bio">
+          <div class="center bottom-border">
+            <h3><strong><?= $user['name'] ?></strong></h3>
+          </div>
+          <p>Bio: <?= $user['latestPost'] ?></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

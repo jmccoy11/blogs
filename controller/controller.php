@@ -27,10 +27,50 @@
   //Define a default route
   $f3->route('GET /', function($f3) {
     
+    /* TEMPORARY VARIABLE: BE SURE TO DELETE OR CHANGE!!! */
+    $f3->set('loop', array( 'id' =>
+                              1,
+                            'name' =>
+                              'Joe Schmoe Blogger',
+                            'postsCount' =>
+                              10,
+                            'profilePic' =>
+                              'images/user.png',
+                            'latestPost' =>
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+                                sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+                                pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+                                Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+                                Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+                                eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+                                magna. Curabitur convallis auctor lectus, quis tincidunt mauris.')
+            );
+    
     echo Template::instance()->render('view/home.php');
   });
   
   //define additional routes
+  $f3->route('GET /user', function($f3) {
+    $f3->set('user', array( 'id' =>
+                              $_GET['id'],
+                            'name' =>
+                              'Joe Schmoe',
+                            'postsCount' =>
+                              10,
+                            'profilePic' =>
+                              'images/user.png',
+                            'latestPost' =>
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+                                sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+                                pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+                                Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+                                Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+                                eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+                                magna. Curabitur convallis auctor lectus, quis tincidunt mauris.')
+            );
+    
+    echo Template::instance()->render('view/user.php');
+  });
   
   //Run fat-free
   $f3->run();
