@@ -14,7 +14,7 @@
             <li><a href="#">Become a Blogger ></a></li>
           
         <?php endif; ?>
-        <li><a href="#">About Us ></a></li>
+        <li><a href="/328/blogs/about">About Us ></a></li>
         <li><a href="#">Login ></a></li>
       </ul>
     </nav>

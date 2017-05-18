@@ -1,0 +1,31 @@
+
+/* About Us Styles */
+
+ /* Override .extend */
+ .extend {
+    margin: 0 -3em 5px -3em;
+    padding: 1em 3em 1em 3em;
+  }
+  
+  .about {
+    background: var(--grey);
+    margin: 0 15px 15px 15px;
+    padding: 1em 3em 1em 3em;
+  }
+  
+  .about img {
+    float: right;
+    width: 18%;
+    min-width: 100px;
+    max-width: 150px;
+    margin-right: 3em;
+  }
+  
+  .quote {
+    margin: 1em 3em 1em 3em;
+  }
+  
+  #about-container {
+    margin: 1em 0 1em 0;
+    padding: 0 1em 1em 1em;
+  }

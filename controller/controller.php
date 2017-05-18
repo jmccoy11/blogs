@@ -98,5 +98,10 @@
     echo Template::instance()->render('view/entry.html');
   });
   
+  $f3->route('GET /about', function($f3)
+  {
+    echo Template::instance()->render('view/about.html');
+  });
+  
   //Run fat-free
   $f3->run();

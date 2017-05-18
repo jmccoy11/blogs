@@ -3,7 +3,7 @@
   <!--
       Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
       Date: 5/16/2017
-      Filename: blog-entry.html
+      Filename: entry.html
       Description: A blogging site for Green River College class IT328
   -->
   
