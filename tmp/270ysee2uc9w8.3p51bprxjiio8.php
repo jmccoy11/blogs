@@ -11,11 +11,11 @@
             <li><a href="#">Create Blog ></a></li>
           
           <?php else: ?>
-            <li><a href="#">Become a Blogger ></a></li>
+            <li><a href="/328/blogs/new">Become a Blogger ></a></li>
           
         <?php endif; ?>
         <li><a href="/328/blogs/about">About Us ></a></li>
-        <li><a href="#">Login ></a></li>
+        <li><a href="/328/blogs/login">Login ></a></li>
       </ul>
     </nav>
   </div> <!-- navbar -->

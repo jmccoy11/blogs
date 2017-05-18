@@ -1,22 +1,17 @@
 
 /* User styles */
 
+  .page-container img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 100%;
+  }
+  
   #header h1 {
     text-align: center;
     background: var(--grey);
     margin: 0 15px 15px 15px;;
     padding: 0;
-  }
-  
-  #user-container {
-    margin: 1em 0 1em 0;
-    padding: 0 1em 1em 1em;
-  }
-  
-  #user-container img {
-    display: block;
-    margin: 0 auto 15px auto;
-    width: 100%;
   }
   
   #most-recent {

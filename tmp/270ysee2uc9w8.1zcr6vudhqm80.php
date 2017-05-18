@@ -3,16 +3,18 @@
   <!--
       Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
       Date: 5/16/2017
-      Filename: home.html
+      Filename: about.html
       Description: A blogging site for Green River College class IT328
   -->
   
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-<!-- implement this
+    
+<!-- TODO: implement this
     <link rel="shortcut icon" href="images/heart-icon.png"> -->
-    <title>The Blog Site</title>
+
+    <title>The Blog Site - New Blogger</title>
     <meta name="description" content="A blogging site for Green River College class IT328">
     <meta name="author" content="Jonnathon McCoy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +28,7 @@
     
     <!--Custom stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/new-blogger.css">
     
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -38,27 +40,11 @@
     <!-- Navbar -->
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
-    <!-- Blog cards -->
-    <div class="row col-md-10 col-xs-12 page-container"> <!-- separates cards from nav --> 
-      
-      <!-- THIS WILL NEED TO BE CHANGED TO LOOP THROUGH THE ARRAY RECIEVED BY THE DATABASE -->
-      <?php for ($i = 0;$i < 6;$i++): ?>
-        <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
-          <div class="card"> <!-- card inner boxes -->
-          
-            <img src="<?= $loop['profilePic'] ?>" />
-            <p class="center"><?= $loop['name'] ?></p>
-            
-            <p class="top-bottom-border extend"><a href="/328/blogs/user?id=<?= $loop['id'] ?>">view blogs</a>
-              <span class="pull-right">Total: <?= $loop['postsCount'] ?></span></p>
-            
-            <p>Something from my latest blog:</p>
-            <p><?= $loop['latestPost'] ?></p>
-            
-          </div> <!-- card -->
-        </div> <!-- card box -->
-      <?php endfor; ?>
-    </div> <!-- blogger-container -->
-    
+    <!-- Blog entry -->
+    <div class="row col-md-10 col-xs-12 page-container">
+      <div class="block">
+        
+      </div>
+    </div>
   </body>
 </html>

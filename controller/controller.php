@@ -59,6 +59,8 @@
                               10,
                             'profilePic' =>
                               'images/user.png',
+                            'latestPostId' =>
+                              1,
                             'latestPost' =>
                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
                                 sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
@@ -81,7 +83,7 @@
                             'profilePic' =>
                               'images/user.png',
                             'blogId' =>
-                              $_GET['blogid'],
+                              $_GET['blogId'],
                             'blogTitle' =>
                               'In the words of Abraham Lincoln',
                             'entryData' =>
@@ -101,6 +103,16 @@
   $f3->route('GET /about', function($f3)
   {
     echo Template::instance()->render('view/about.html');
+  });
+  
+  $f3->route('GET /login', function($f3)
+  {
+    echo Template::instance()->render('view/login.html');
+  });
+  
+  $f3->route('GET /new', function($f3)
+  {
+    echo Template::instance()->render('view/new.html');
   });
   
   //Run fat-free

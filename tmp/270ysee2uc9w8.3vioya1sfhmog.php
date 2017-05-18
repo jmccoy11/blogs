@@ -40,14 +40,14 @@
     <!-- Navbar -->
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
-    <div id="user-container" class="row col-md-10 col-xs-12">
+    <div class="row col-md-10 col-xs-12 page-container">
       <div id="header">
         <h1><?= $user['name'] ?>'s Blogs</h1>
       </div>
       
       <div class="col-md-8">
         <div id="most-recent">
-          <h4><a href="/328/blogs/entry?blogId=<?= $user['blogId'] ?>"><strong>My most recent blog:</strong></a></h4>
+          <h4><a href="/328/blogs/entry?blogId=<?= $user['latestPostId'] ?>"><strong>My most recent blog:</strong></a></h4>
           <p><?= $user['latestPost'] ?></p>
         </div>
       

@@ -41,7 +41,7 @@
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
     <!-- Blog entry -->
-    <div id="about-container" class="row col-md-10 col-xs-12">
+    <div class="row col-md-10 col-xs-12 page-container">
       <div class="about">
         <img src="images/blog_logo.png" alt="Blog Logo" />
         <h1><strong>The Blog site</strong></h1>
@@ -50,9 +50,8 @@
       </div>
       
       <div class="about">
-        <div>
-          <h4><strong>The Internet is abuzz with our blog content.</strong></h4>
-        </div>
+        <h4><strong>The Internet is abuzz with our blog content.</strong></h4>
+        
         <div class="top-bottom-border extend">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
             sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
@@ -62,6 +61,7 @@
             eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
             magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
         </div>
+        
         <div>
           <h4><strong>Hear what others are saying about us!</strong></h4>
           <div>
