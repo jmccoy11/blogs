@@ -1,15 +1,16 @@
+
 /* User styles */
 
-  #user-container {
-    margin: 1em 0 1em 0;
-    padding: 0 1em 1em 1em;
-  }
-  
-  h1 {
+  #header h1 {
     text-align: center;
     background: var(--grey);
     margin: 0 15px 15px 15px;;
     padding: 0;
+  }
+  
+  #user-container {
+    margin: 1em 0 1em 0;
+    padding: 0 1em 1em 1em;
   }
   
   #user-container img {
@@ -30,6 +31,11 @@
     padding: 5px 1em;
   }
   
+  #my-blogs h4 {
+    margin: 0;
+    padding: 0;
+  }
+  
   #bio {
     background: var(--grey);
     margin: 0 0 15px 0;
@@ -41,3 +47,4 @@
     padding: 0;
     margin: 0;
   }
+  

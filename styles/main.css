@@ -1,3 +1,4 @@
+
 /* Main Styles */
 
 /* Variables */
@@ -9,8 +10,31 @@
 
 
 /* Body Styles */
+  /* Classes */
+  .top-bottom-border {
+    /* padding: 5px 1em 5px 1em;
+    margin: 0 -1em 1em -1em; */
+    border-top: solid 2px var(--darkgrey);
+    border-bottom: solid 2px var(--darkgrey);
+  }
+  
+  .bottom-border {
+    border-bottom: solid 2px var(--darkgrey);
+    /* padding: 5px 1em 5px 1em;
+    margin: 0 -1em 0 -1em;*/
+  }
+  
+  .extend {
+    margin: 0 -1em 5px -1em;
+    padding: 5px 1em 5px 1em;
+  }
+  
   .center {
     text-align: center;
+  }
+  
+  .blue {
+    color: blue;
   }
   
   
@@ -49,16 +73,4 @@
     list-style: none;
   }
   
-  /* Classes */
-  .top-bottom-border {
-    padding: 5px 1em 5px 1em;
-    margin: 0 -1em 1em -1em;
-    border-top: solid 2px var(--darkgrey);
-    border-bottom: solid 2px var(--darkgrey);
-  }
   
-  .bottom-border {
-    border-bottom: solid 2px var(--darkgrey);
-    padding: 5px 1em 5px 1em;
-    margin: 0 -1em 1em -1em;
-  }

@@ -1,0 +1,21 @@
+
+/* Entry Styles */
+
+  #entry-container {
+    margin: 1em 0 1em 0;
+    padding: 0 1em 1em 1em;
+  }
+  
+  #entry {
+    background: var(--grey);
+    margin: 0 15px 15px 15px;;
+    padding: 3em;
+    min-height: 400px;
+  }
+  
+  #entry img {
+    float: right;
+    width: 40%;
+    min-width: 200px;
+    max-width: 400px;
+  }

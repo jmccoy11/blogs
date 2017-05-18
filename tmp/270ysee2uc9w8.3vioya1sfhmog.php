@@ -3,7 +3,7 @@
   <!--
       Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
       Date: 5/16/2017
-      Filename: home.html
+      Filename: user.html
       Description: A blogging site for Green River College class IT328
   -->
   
@@ -14,7 +14,7 @@
 <!-- TODO: implement this
     <link rel="shortcut icon" href="images/heart-icon.png"> -->
 
-    <title>The Blog Site</title>
+    <title>The Blog Site - View User</title>
     <meta name="description" content="A blogging site for Green River College class IT328">
     <meta name="author" content="Jonnathon McCoy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +47,7 @@
       
       <div class="col-md-8">
         <div id="most-recent">
-          <h4><a href="#"><strong>My most recent blog:</strong></a></h4>
+          <h4><a href="/328/blogs/entry?blogId=<?= $user['blogId'] ?>"><strong>My most recent blog:</strong></a></h4>
           <p><?= $user['latestPost'] ?></p>
         </div>
       
@@ -58,17 +58,17 @@
           
           
           <div class="bottom-border extend">
-            <h4><a href="#">In the words of Abraham Lincoln</a> - word count: 716 - 12/02/2007</h4>
+            <h4><a href="/328/blogs/entry?blogId=1">In the words of Abraham Lincoln</a> - word count: 716 - 12/02/2007</h4>
             <p><?= $user['latestPost'] ?></p>
           </div>
           
           <div class="bottom-border extend">
-            <h4><a href="#">Renovating my house</a> - word count: 202 - 09/10/2007</h4>
+            <h4><a href="/328/blogs/entry?blogId=1">Renovating my house</a> - word count: 202 - 09/10/2007</h4>
             <p><?= $user['latestPost'] ?></p>
           </div>
           
           <div class="bottom-border extend">
-            <h4><a href="#">The Mariners are losing again</a> - word count: 998 - 05/04/2007</h4>
+            <h4><a href="/328/blogs/entry?blogId=1">The Mariners are losing again</a> - word count: 998 - 05/04/2007</h4>
             <p><?= $user['latestPost'] ?></p>
           </div>
         </div>

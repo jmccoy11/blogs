@@ -46,7 +46,7 @@
                                 magna. Curabitur convallis auctor lectus, quis tincidunt mauris.')
             );
     
-    echo Template::instance()->render('view/home.php');
+    echo Template::instance()->render('view/home.html');
   });
   
   //define additional routes
@@ -69,7 +69,33 @@
                                 magna. Curabitur convallis auctor lectus, quis tincidunt mauris.')
             );
     
-    echo Template::instance()->render('view/user.php');
+    echo Template::instance()->render('view/user.html');
+  });
+  
+  $f3->route('GET /entry', function($f3)
+  {
+    $f3->set('entry', array('id' =>
+                              1,
+                            'name' =>
+                              'Joe Schmoe',
+                            'profilePic' =>
+                              'images/user.png',
+                            'blogId' =>
+                              $_GET['blogid'],
+                            'blogTitle' =>
+                              'In the words of Abraham Lincoln',
+                            'entryData' =>
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+                                sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+                                pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+                                Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+                                Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+                                eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+                                magna. Curabitur convallis auctor lectus, quis tincidunt mauris.')
+             );
+    
+    
+    echo Template::instance()->render('view/entry.html');
   });
   
   //Run fat-free

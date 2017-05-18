@@ -176,3 +176,13 @@
 [17-May-2017 21:07:44 America/Chicago] HTTP 404 (GET /user?id=1)
 [17-May-2017 21:07:44 America/Chicago] [328/blogs/controller/controller.php:58] Base->run()
 [17-May-2017 21:07:44 America/Chicago] [328/blogs/index.php:3] require_once()
+[18-May-2017 00:08:20 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting '{' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 75
+[18-May-2017 00:08:42 America/Chicago] PHP Parse error:  syntax error, unexpected ''blogId'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 83
+[18-May-2017 00:09:32 America/Chicago] PHP Parse error:  syntax error, unexpected ''blogId'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 83
+[18-May-2017 00:09:50 America/Chicago] HTTP 404 (GET /entry?blogId=1)
+[18-May-2017 00:09:50 America/Chicago] [328/blogs/controller/controller.php:97] Base->run()
+[18-May-2017 00:09:50 America/Chicago] [328/blogs/index.php:3] require_once()
+[18-May-2017 00:15:45 America/Chicago] syntax error, unexpected '?>', expecting ']' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.hoeni6ovnqqi.php:45]
+[18-May-2017 00:15:45 America/Chicago] [328/blogs/controller/controller.php:98] Preview->render()
+[18-May-2017 00:15:45 America/Chicago] [328/blogs/controller/controller.php:102] Base->run()
+[18-May-2017 00:15:45 America/Chicago] [328/blogs/index.php:3] require_once()
