@@ -34,62 +34,66 @@
     
   </head>
   <body>
+    <!-- Navbar -->
     <div class="col-xs-2">
       <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     </div>
-      
+    
+    <!-- Blog cards -->
     <div id="blogger-container" class="row col-xs-10"> <!-- separates cards from nav --> 
-        <div class="card-box col-xs-4"> <!-- card outer boxes to add margins -->
-          <div class="card"> <!-- card inner boxes -->
-            <img src="images/user.png" />
-            <hr />
-            <span><a href="#">view blogs</a></span>
-            <hr />
-            <p>Something from my latest blog:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-            sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-            pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-            Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
-            Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
-            eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
-            magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
-          </div>
-        </div>
-        
-        <div class="card-box col-xs-4">
-          <div class="card">
-            <img src="images/user.png" />
-            <hr />
-            <span><a href="#">view blogs</a></span>
-            <hr />
-            <p>Something from my latest blog:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-            sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-            pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-            Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
-            Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
-            eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
-            magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
-          </div>
-        </div>
-        
-        <div class="card-box col-xs-4">
-          <div class="card">
-            <img src="images/user.png" />
-            <hr />
-            <span><a href="#">view blogs</a></span>
-            <hr />
-            <p>Something from my latest blog:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-            sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-            pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-            Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
-            Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
-            eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
-            magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
-          </div>
-        </div>
-      </div>
+      <div class="card-box col-xs-4"> <!-- card outer boxes to add margins -->
+        <div class="card"> <!-- card inner boxes -->
+          <img src="images/user.png" />
+          <p class="center">Joe Shmoe Blogger</span>
+          
+          <p class="cell"><a href="#">view blogs</a></p>
+          
+          <p>Something from my latest blog:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
+        </div> <!-- card -->
+      </div> <!-- card box -->
       
+      <div class="card-box col-xs-4">
+        <div class="card">
+          <img src="images/user.png" />
+          <p class="center">Joe Shmoe Blogger</p>
+          
+          <p class="cell"><a href="#">view blogs</a></p>
+          
+          <p>Something from my latest blog:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
+        </div> <!-- card -->
+      </div> <!-- card box -->
+      
+      <div class="card-box col-xs-4">
+        <div class="card">
+          <img src="images/user.png" />
+          <p class="center">Joe Shmoe Blogger</p>
+          
+          <p class="cell"><a href="#">view blogs</a></p>
+          
+          <p>Something from my latest blog:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
+          sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
+          pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
+          Nullam vel sollicitudin lorem. Sed ullamcorper pulvinar odio, at luctus odio iaculis aliquet.
+          Curabitur in odio egestas, venenatis dui efficitur, tincidunt sem. Mauris tempor rutrum purus
+          eu convallis. Nam eget tellus a nunc rhoncus consequat eget non sapien. Nulla suscipit malesuada
+          magna. Curabitur convallis auctor lectus, quis tincidunt mauris.</p>
+        </div> <!-- card -->
+      </div> <!-- card-box -->
+    </div> <!-- blogger-container -->
   </body>
 </html>
