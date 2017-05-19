@@ -1,2 +1,68 @@
 
 /* New Blogger Styles */
+  
+  #left-column {
+    margin-top: 1em;
+    border-right: solid 1px var(--darkgrey);
+  }
+  
+  #right-column {
+    margin-top: 1em;
+  }
+  
+  #right-column .form-input-field {
+    background: none;
+    padding: 0;
+  }
+  
+  #quick-bio {
+    width: 100%;
+  }
+  
+  .form-input-group {
+    overflow: auto;
+    width: 100%;
+  }
+  
+  .form-input-field {
+    overflow: auto;
+    padding: 10px 0 5px 25px;
+    background: var(--lightgrey);
+  }
+  
+  .form-input-field label {
+    height: 40px;
+    min-width: 110px;
+    width: auto;
+    padding: 6px 10px 5px 10px;
+    background: var(--grey);
+    border: solid 2px var(--lightgrey);
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  .form-input-field input {
+    height: 40px;
+    border: none;
+  }
+  
+  .separator {
+    height: 1em;
+  }
+  
+  #submit-div {
+    clear: left;
+    text-align: center;
+  }
+  
+  #submit-button {
+    position: relative;
+    margin: 1em auto;
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    background: #76daaf;
+    border: solid 1px black;
+    border-radius: 10px;
+  }

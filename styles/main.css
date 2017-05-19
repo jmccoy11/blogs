@@ -45,12 +45,14 @@
   }
   
   .block {
+    overflow: auto;
     background: var(--grey);
-    margin: 0 15px 15px 15px;
+    margin: 0 0 15px 0;
     padding: 1em 3em 1em 3em;
   }
   
   .block img {
+    overflow: auto;
     float: right;
     min-width: 120px;
     max-width: 120px;
@@ -62,10 +64,9 @@
 /* Navbar */
 
   #navbar {
-    height: 500px;
+    overflow: auto;
     background-color: var(--grey);
     margin-top: 1em;
-    margin-right: -1em;
     padding: 1em 0;
   }
   

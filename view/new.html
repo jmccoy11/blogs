@@ -41,9 +41,71 @@
     <include href="includes/navbar.inc.html" />
     
     <!-- Blog entry -->
-    <div class="row col-md-10 col-xs-12 page-container">
+    <div class="row col-sm-10 col-xs-12 page-container">
       <div class="block">
-        
+        <img src="images/writing.png" alt="Blog Logo" />
+        <h1><strong>Become a Blogger!</strong></h1>
+        <br />
+        <h3>Create a new account below</h3>
+      </div>
+      
+      <div class="block">
+        <form action="#" method="POST">
+            <div id="left-column" class="col-xs-6">
+              <div class="form-input-group">
+                <div class="form-input-field">
+                  <input id="username" name="username" placeholder=""
+                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="username" class="col-xs-4">Username</label>
+                </div>
+                <div class="form-input-field">
+                  <input id="email" name="email" placeholder=""
+                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="email" class="col-xs-4">Email</label>
+                </div>
+              </div>
+              
+              <div class="separator">
+                <p></p>
+              </div>
+              
+              <div class="form-input-group">
+                <div class="form-input-field">
+                  <input id="password" name="password" placeholder=""
+                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="password" class="col-xs-4">Password</label>
+                </div>
+                <div class="form-input-field">
+                  <input id="verify" name="verify" placeholder=""
+                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="verify" class="col-xs-4">Verify</label>
+                </div>
+              </div>
+            </div >
+            
+            <div id="right-column" class="col-xs-6">
+              <div class="form-input-group">
+                <div class="form-input-field">
+                  <input id="profilePic" name="profilePic" placeholder=""
+                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="profilePic" class="col-xs-4">Upload Portait</label><br />
+                </div>
+              </div>
+                
+              <div class="form-input-group">
+                <div class="form-input-field">
+                  <label id="quick-bio" for="bio">Quick Biography</label><br />
+                  <textarea id="bio" name="bio"></textarea>
+                </div>
+              </div>
+            </div>
+
+          <div id="submit-div">
+            <input id="submit-button" type="submit"
+                 value="Start Blogging!" />
+          </div>
+          
+        </form>
       </div>
     </div>
   </body>
