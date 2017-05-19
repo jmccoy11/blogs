@@ -1,0 +1,27 @@
+
+ /* New Blog Styles */
+ 
+ .box {
+  background: var(--grey);
+  border: solid 1px var(--darkgrey);
+ }
+ 
+ .title-box {
+  width: 100%;
+ }
+ 
+ #blog-entry {
+  width: 100%;
+  height: 300px;
+ }
+ 
+ #submit-button {
+    position: relative;
+    margin: 1em auto;
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    background: #76daaf;
+    border: solid 1px black;
+    border-radius: 10px;
+  }

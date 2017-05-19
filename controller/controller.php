@@ -112,12 +112,17 @@
   
   $f3->route('GET /new', function($f3)
   {
-    echo Template::instance()->render('view/new.html');
+    echo Template::instance()->render('view/new-user.html');
   });
   
   $f3->route('GET /user-blogs', function($f3)
   {
     echo Template::instance()->render('view/user-blogs.html');
+  });
+  
+  $f3->route('GET /create', function($f3)
+  {
+    echo Template::instance()->render('view/create.html');
   });
   
   //Run fat-free
