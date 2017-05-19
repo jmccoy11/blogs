@@ -55,13 +55,13 @@
               <div class="form-input-group">
                 <div class="form-input-field">
                   <input id="username" name="username" placeholder=""
-                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
-                  <label for="username" class="col-xs-4">Username</label>
+                         type="text" class="col-xs-7" tabindex=1 autocomplete="off">
+                  <label for="username" class="col-xs-5">Username</label>
                 </div>
                 <div class="form-input-field">
                   <input id="email" name="email" placeholder=""
-                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
-                  <label for="email" class="col-xs-4">Email</label>
+                         type="text" class="col-xs-7" tabindex=1 autocomplete="off">
+                  <label for="email" class="col-xs-5">Email</label>
                 </div>
               </div>
               
@@ -91,10 +91,19 @@
                   <label for="profilePic" class="col-xs-4">Upload Portait</label><br />
                 </div>
               </div>
-                
+              
+              <div class="separator">
+                <p></p>
+              </div>
+              
               <div class="form-input-group">
                 <div class="form-input-field">
                   <label id="quick-bio" for="bio">Quick Biography</label><br />
+                  
+                  <div class="separator">
+                    <p></p>
+                  </div>
+                  
                   <textarea id="bio" name="bio"></textarea>
                 </div>
               </div>

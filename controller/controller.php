@@ -115,5 +115,10 @@
     echo Template::instance()->render('view/new.html');
   });
   
+  $f3->route('GET /user-blogs', function($f3)
+  {
+    echo Template::instance()->render('view/user-blogs.html');
+  });
+  
   //Run fat-free
   $f3->run();

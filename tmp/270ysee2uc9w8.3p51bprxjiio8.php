@@ -1,5 +1,5 @@
-<div class="col-sm-2 col-xs-12">
-  <div id="navbar" class="">
+<div class="col-sm-3 sidenav">
+  <div id="navbar" class="nav nav-pills nav-stacked">
     <nav>
       <h2>Blog Site</h2>
       <img src="images/trumpet.png" class="visible-sm visible-md visible-lg" alt="trumpet.png" />

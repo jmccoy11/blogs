@@ -41,7 +41,7 @@
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
     <!-- Blog entry -->
-    <div class="row col-md-10 col-xs-12 page-container">
+    <div class="row col-sm-10 col-xs-12 page-container">
       <div id="entry">
         <img src="<?= $entry['profilePic'] ?>" alt="profile pic" />
         <h1 class="center"><strong><?= $entry['blogTitle'] ?></strong></a></h4>

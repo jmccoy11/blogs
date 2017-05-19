@@ -39,7 +39,7 @@
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
     <!-- Blog cards -->
-    <div class="row col-md-10 col-xs-12 page-container"> <!-- separates cards from nav --> 
+    <div class="row col-md-9 col-xs-12 page-container"> <!-- separates cards from nav --> 
       
       <!-- THIS WILL NEED TO BE CHANGED TO LOOP THROUGH THE ARRAY RECIEVED BY THE DATABASE -->
       <?php for ($i = 0;$i < 6;$i++): ?>
