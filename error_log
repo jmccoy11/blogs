@@ -258,3 +258,363 @@
 [19-May-2017 00:27:11 America/Chicago] HTTP 404 (GET /bird.jpg)
 [19-May-2017 00:27:11 America/Chicago] [328/blogs/controller/controller.php:124] Base->run()
 [19-May-2017 00:27:11 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 02:55:18 America/Chicago] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 30
+[19-May-2017 02:55:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 32
+[19-May-2017 02:57:30 America/Chicago] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 32
+[19-May-2017 02:58:06 America/Chicago] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 32
+[19-May-2017 02:58:53 America/Chicago] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 32
+[19-May-2017 02:59:03 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bloggers' at line 1 [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:36]
+[19-May-2017 02:59:03 America/Chicago] [328/blogs/model/blogsdb.php:36] PDOStatement->execute()
+[19-May-2017 02:59:03 America/Chicago] [328/blogs/controller/controller.php:30] BlogsDB->getDBContents()
+[19-May-2017 02:59:03 America/Chicago] [328/blogs/controller/controller.php:138] Base->run()
+[19-May-2017 02:59:03 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:27:21 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 03:27:21 America/Chicago] [328/blogs/controller/controller.php:55] Preview->render()
+[19-May-2017 03:27:21 America/Chicago] [328/blogs/controller/controller.php:135] Base->run()
+[19-May-2017 03:27:21 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:54:28 America/Chicago] Call to undefined method BlogsDB::getPosts() [/home/jmccoy/public_html/328/blogs/controller/controller.php:42]
+[19-May-2017 03:54:28 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:54:28 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:55:20 America/Chicago] Missing argument 1 for BlogsDB::getAllPosts(), called in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 42 and defined
+[19-May-2017 03:55:20 America/Chicago] [328/blogs/model/blogsdb.php:44] Base->{closure}()
+[19-May-2017 03:55:20 America/Chicago] [328/blogs/controller/controller.php:42] BlogsDB->getAllPosts()
+[19-May-2017 03:55:20 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:55:20 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:55:48 America/Chicago] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'blogPost' in 'field list' [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:57]
+[19-May-2017 03:55:48 America/Chicago] [328/blogs/model/blogsdb.php:57] PDOStatement->execute()
+[19-May-2017 03:55:48 America/Chicago] [328/blogs/controller/controller.php:42] BlogsDB->getAllPosts()
+[19-May-2017 03:55:48 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:55:48 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:56:46 America/Chicago] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'blogId' in field list is ambiguous [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:57]
+[19-May-2017 03:56:46 America/Chicago] [328/blogs/model/blogsdb.php:57] PDOStatement->execute()
+[19-May-2017 03:56:46 America/Chicago] [328/blogs/controller/controller.php:42] BlogsDB->getAllPosts()
+[19-May-2017 03:56:46 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:56:46 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:58:19 America/Chicago] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'blogId' in field list is ambiguous [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:57]
+[19-May-2017 03:58:19 America/Chicago] [328/blogs/model/blogsdb.php:57] PDOStatement->execute()
+[19-May-2017 03:58:19 America/Chicago] [328/blogs/controller/controller.php:42] BlogsDB->getAllPosts()
+[19-May-2017 03:58:19 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:58:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:59:07 America/Chicago] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'blogsId.blogId' in 'on clause' [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:57]
+[19-May-2017 03:59:07 America/Chicago] [328/blogs/model/blogsdb.php:57] PDOStatement->execute()
+[19-May-2017 03:59:07 America/Chicago] [328/blogs/controller/controller.php:42] BlogsDB->getAllPosts()
+[19-May-2017 03:59:07 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:59:07 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 03:59:36 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 03:59:36 America/Chicago] [328/blogs/controller/controller.php:62] Preview->render()
+[19-May-2017 03:59:36 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 03:59:36 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:00:37 America/Chicago] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'blogId' in field list is ambiguous [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:57]
+[19-May-2017 04:00:37 America/Chicago] [328/blogs/model/blogsdb.php:57] PDOStatement->execute()
+[19-May-2017 04:00:37 America/Chicago] [328/blogs/controller/controller.php:42] BlogsDB->getAllPosts()
+[19-May-2017 04:00:37 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 04:00:37 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:00:47 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:00:47 America/Chicago] [328/blogs/controller/controller.php:62] Preview->render()
+[19-May-2017 04:00:47 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 04:00:47 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:02:03 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:02:03 America/Chicago] [328/blogs/controller/controller.php:62] Preview->render()
+[19-May-2017 04:02:03 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 04:02:03 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:03:00 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:03:00 America/Chicago] [328/blogs/controller/controller.php:58] Preview->render()
+[19-May-2017 04:03:00 America/Chicago] [328/blogs/controller/controller.php:138] Base->run()
+[19-May-2017 04:03:00 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:04:15 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:04:15 America/Chicago] [328/blogs/controller/controller.php:62] Preview->render()
+[19-May-2017 04:04:15 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 04:04:15 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:04:36 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:04:36 America/Chicago] [328/blogs/controller/controller.php:59] Preview->render()
+[19-May-2017 04:04:36 America/Chicago] [328/blogs/controller/controller.php:139] Base->run()
+[19-May-2017 04:04:36 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:05:17 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:05:17 America/Chicago] [328/blogs/controller/controller.php:62] Preview->render()
+[19-May-2017 04:05:17 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 04:05:17 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:05:54 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:05:54 America/Chicago] [328/blogs/controller/controller.php:62] Preview->render()
+[19-May-2017 04:05:54 America/Chicago] [328/blogs/controller/controller.php:142] Base->run()
+[19-May-2017 04:05:54 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:06:32 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 53
+[19-May-2017 04:06:41 America/Chicago] Call to a member function getBlogId() on array [/home/jmccoy/public_html/328/blogs/controller/controller.php:52]
+[19-May-2017 04:06:41 America/Chicago] [328/blogs/controller/controller.php:143] Base->run()
+[19-May-2017 04:06:41 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:06:58 America/Chicago] Call to a member function getBlogId() on array [/home/jmccoy/public_html/328/blogs/controller/controller.php:52]
+[19-May-2017 04:06:58 America/Chicago] [328/blogs/controller/controller.php:143] Base->run()
+[19-May-2017 04:06:58 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:08:19 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:08:19 America/Chicago] [328/blogs/controller/controller.php:63] Preview->render()
+[19-May-2017 04:08:19 America/Chicago] [328/blogs/controller/controller.php:143] Base->run()
+[19-May-2017 04:08:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:09:10 America/Chicago] Call to undefined method Blogger::getMostRecent() [/home/jmccoy/public_html/328/blogs/controller/controller.php:56]
+[19-May-2017 04:09:10 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:09:10 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:09:44 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:09:44 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:09:44 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:09:44 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:11:01 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:11:01 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:11:01 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:11:01 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:11:20 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:11:20 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:11:20 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:11:20 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:11:49 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:11:49 America/Chicago] [328/blogs/controller/controller.php:64] Preview->render()
+[19-May-2017 04:11:49 America/Chicago] [328/blogs/controller/controller.php:144] Base->run()
+[19-May-2017 04:11:49 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:12:37 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:12:37 America/Chicago] [328/blogs/controller/controller.php:64] Preview->render()
+[19-May-2017 04:12:37 America/Chicago] [328/blogs/controller/controller.php:144] Base->run()
+[19-May-2017 04:12:37 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:13:20 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:13:20 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:13:20 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:13:20 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:14:04 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:14:04 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:14:04 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:14:04 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:15:25 America/Chicago] Cannot use object of type Blogger as array [/home/jmccoy/public_html/328/blogs/controller/controller.php:55]
+[19-May-2017 04:15:25 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:15:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:15:38 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:15:38 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:15:38 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:15:38 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:17:02 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:17:02 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:17:02 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:17:02 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:17:25 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:17:25 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:17:25 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:17:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:18:22 America/Chicago] syntax error, unexpected '[', expecting ']' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:57]
+[19-May-2017 04:18:22 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:18:22 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:18:22 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:18:39 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:18:39 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:18:39 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:18:39 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:19:44 America/Chicago] Call to a member function getId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:53]
+[19-May-2017 04:19:44 America/Chicago] [328/blogs/controller/controller.php:65] Preview->render()
+[19-May-2017 04:19:44 America/Chicago] [328/blogs/controller/controller.php:145] Base->run()
+[19-May-2017 04:19:44 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:48:58 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:57]
+[19-May-2017 04:48:58 America/Chicago] [328/blogs/controller/controller.php:156] Base->run()
+[19-May-2017 04:48:58 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:49:39 America/Chicago] Call to undefined method Blogger::getAllPosts() [/home/jmccoy/public_html/328/blogs/controller/controller.php:57]
+[19-May-2017 04:49:39 America/Chicago] [328/blogs/controller/controller.php:156] Base->run()
+[19-May-2017 04:49:39 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:50:49 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:57]
+[19-May-2017 04:50:49 America/Chicago] [328/blogs/controller/controller.php:156] Base->run()
+[19-May-2017 04:50:49 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:52:52 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:57]
+[19-May-2017 04:52:52 America/Chicago] [328/blogs/controller/controller.php:156] Base->run()
+[19-May-2017 04:52:52 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:53:26 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:64]
+[19-May-2017 04:53:26 America/Chicago] [328/blogs/controller/controller.php:163] Base->run()
+[19-May-2017 04:53:26 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:54:59 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:57]
+[19-May-2017 04:54:59 America/Chicago] [328/blogs/controller/controller.php:156] Base->run()
+[19-May-2017 04:54:59 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:55:35 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:57]
+[19-May-2017 04:55:35 America/Chicago] [328/blogs/controller/controller.php:156] Base->run()
+[19-May-2017 04:55:35 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:56:41 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:60]
+[19-May-2017 04:56:41 America/Chicago] [328/blogs/controller/controller.php:151] Base->run()
+[19-May-2017 04:56:41 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:57:09 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:60]
+[19-May-2017 04:57:09 America/Chicago] [328/blogs/controller/controller.php:151] Base->run()
+[19-May-2017 04:57:09 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 04:58:57 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/controller/controller.php:61]
+[19-May-2017 04:58:57 America/Chicago] [328/blogs/controller/controller.php:152] Base->run()
+[19-May-2017 04:58:57 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:01:49 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 05:01:49 America/Chicago] [328/blogs/controller/controller.php:73] Preview->render()
+[19-May-2017 05:01:49 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 05:01:49 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:02:19 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 05:02:19 America/Chicago] [328/blogs/controller/controller.php:75] Preview->render()
+[19-May-2017 05:02:19 America/Chicago] [328/blogs/controller/controller.php:157] Base->run()
+[19-May-2017 05:02:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:02:28 America/Chicago] Missing argument 1 for BlogsDB::getBlogger(), called in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 81 and defined
+[19-May-2017 05:02:28 America/Chicago] [328/blogs/model/blogsdb.php:44] Base->{closure}()
+[19-May-2017 05:02:28 America/Chicago] [328/blogs/controller/controller.php:81] BlogsDB->getBlogger()
+[19-May-2017 05:02:28 America/Chicago] [328/blogs/controller/controller.php:157] Base->run()
+[19-May-2017 05:02:28 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:03:23 America/Chicago] Illegal string offset 'id'
+[19-May-2017 05:03:23 America/Chicago] [328/blogs/controller/controller.php:81] Base->{closure}()
+[19-May-2017 05:03:23 America/Chicago] [328/blogs/controller/controller.php:157] Base->run()
+[19-May-2017 05:03:23 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:03:33 America/Chicago] Missing argument 1 for BlogsDB::getAllPosts(), called in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 82 and defined
+[19-May-2017 05:03:33 America/Chicago] [328/blogs/model/blogsdb.php:61] Base->{closure}()
+[19-May-2017 05:03:33 America/Chicago] [328/blogs/controller/controller.php:82] BlogsDB->getAllPosts()
+[19-May-2017 05:03:33 America/Chicago] [328/blogs/controller/controller.php:157] Base->run()
+[19-May-2017 05:03:33 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:25:20 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 83
+[19-May-2017 05:42:38 America/Chicago] Call to a member function getBlogId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:63]
+[19-May-2017 05:42:38 America/Chicago] [328/blogs/controller/controller.php:119] Preview->render()
+[19-May-2017 05:42:38 America/Chicago] [328/blogs/controller/controller.php:174] Base->run()
+[19-May-2017 05:42:38 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:43:31 America/Chicago] Call to a member function getBlogId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:63]
+[19-May-2017 05:43:31 America/Chicago] [328/blogs/controller/controller.php:118] Preview->render()
+[19-May-2017 05:43:31 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:43:31 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:45:06 America/Chicago] Call to a member function getBlogId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:63]
+[19-May-2017 05:45:06 America/Chicago] [328/blogs/controller/controller.php:118] Preview->render()
+[19-May-2017 05:45:06 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:45:06 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:45:22 America/Chicago] syntax error, unexpected ')' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:61]
+[19-May-2017 05:45:22 America/Chicago] [328/blogs/controller/controller.php:118] Preview->render()
+[19-May-2017 05:45:22 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:45:22 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:46:11 America/Chicago] syntax error, unexpected ')' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:61]
+[19-May-2017 05:46:11 America/Chicago] [328/blogs/controller/controller.php:118] Preview->render()
+[19-May-2017 05:46:11 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:46:11 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:46:28 America/Chicago] Call to a member function getBlogId() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:63]
+[19-May-2017 05:46:28 America/Chicago] [328/blogs/controller/controller.php:118] Preview->render()
+[19-May-2017 05:46:28 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:46:28 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:49:19 America/Chicago] Call to undefined function getName() [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:78]
+[19-May-2017 05:49:19 America/Chicago] [328/blogs/controller/controller.php:118] Preview->render()
+[19-May-2017 05:49:19 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:49:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:53:09 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 05:53:09 America/Chicago] [328/blogs/controller/controller.php:68] Preview->render()
+[19-May-2017 05:53:09 America/Chicago] [328/blogs/controller/controller.php:173] Base->run()
+[19-May-2017 05:53:09 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:55:51 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 05:55:51 America/Chicago] [328/blogs/controller/controller.php:68] Preview->render()
+[19-May-2017 05:55:51 America/Chicago] [328/blogs/controller/controller.php:174] Base->run()
+[19-May-2017 05:55:51 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:55:54 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 05:55:54 America/Chicago] [328/blogs/controller/controller.php:68] Preview->render()
+[19-May-2017 05:55:54 America/Chicago] [328/blogs/controller/controller.php:174] Base->run()
+[19-May-2017 05:55:54 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:58:33 America/Chicago] include(objectCreation.inc.php): failed to open stream: No such file or directory
+[19-May-2017 05:58:33 America/Chicago] [328/blogs/controller/controller.php:36] Base->{closure}()
+[19-May-2017 05:58:33 America/Chicago] [328/blogs/controller/controller.php:36] include()
+[19-May-2017 05:58:33 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 05:58:33 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:58:43 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:53]
+[19-May-2017 05:58:43 America/Chicago] [328/blogs/model/blogsdb.php:53] PDOStatement->execute()
+[19-May-2017 05:58:43 America/Chicago] [328/blogs/includes/objectCreation.inc.php:2] BlogsDB->getBlogger()
+[19-May-2017 05:58:43 America/Chicago] [328/blogs/controller/controller.php:36] include()
+[19-May-2017 05:58:43 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 05:58:43 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 05:59:36 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 05:59:36 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 05:59:36 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 05:59:36 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:02:19 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:02:19 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:02:19 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:02:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:05:12 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:05:12 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:05:12 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:05:12 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:05:58 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:05:58 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:05:58 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:05:58 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:06:30 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:06:30 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:06:30 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:06:30 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:06:35 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:06:35 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:06:35 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:06:35 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:06:40 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:06:40 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:06:40 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:06:40 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:06:46 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:06:46 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:06:46 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:06:46 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:06:50 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:06:50 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:06:50 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:06:50 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:06:52 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:53]
+[19-May-2017 06:06:52 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:06:52 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:06:52 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:07:15 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:07:15 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:07:15 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:07:15 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:09:31 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:09:31 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:09:31 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:09:31 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:11:39 America/Chicago] syntax error, unexpected '?>' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:11:39 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:11:39 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:11:39 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:12:07 America/Chicago] Call to undefined function getPosts() [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3h8ht0jeaqm8c.php:56]
+[19-May-2017 06:12:07 America/Chicago] [328/blogs/controller/controller.php:69] Preview->render()
+[19-May-2017 06:12:07 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:12:07 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:14:52 America/Chicago] Call to a member function getBlogPost() on boolean [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:53]
+[19-May-2017 06:14:52 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:14:52 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:14:52 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:18:07 America/Chicago] syntax error, unexpected '?>', expecting ',' or ')' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:90]
+[19-May-2017 06:18:07 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:18:07 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:18:07 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:20:54 America/Chicago] syntax error, unexpected '?>', expecting ',' or ')' [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:99]
+[19-May-2017 06:20:54 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:20:54 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:20:54 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:25:42 America/Chicago] Call to a member function getPosts() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64]
+[19-May-2017 06:25:42 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:25:42 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:25:42 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:25:55 America/Chicago] Call to a member function getPosts() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64]
+[19-May-2017 06:25:55 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:25:55 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:25:55 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:26:01 America/Chicago] Call to a member function getPosts() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64]
+[19-May-2017 06:26:01 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:26:01 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:26:01 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:26:08 America/Chicago] Call to a member function getPosts() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64]
+[19-May-2017 06:26:08 America/Chicago] [328/blogs/controller/controller.php:100] Preview->render()
+[19-May-2017 06:26:08 America/Chicago] [328/blogs/controller/controller.php:155] Base->run()
+[19-May-2017 06:26:08 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:26:43 America/Chicago] Call to a member function getPosts() on null [/home/jmccoy/public_html/328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64]
+[19-May-2017 06:26:43 America/Chicago] [328/blogs/controller/controller.php:72] Preview->render()
+[19-May-2017 06:26:43 America/Chicago] [328/blogs/controller/controller.php:127] Base->run()
+[19-May-2017 06:26:43 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:29:11 America/Chicago] Object of class BlogPost could not be converted to string
+[19-May-2017 06:29:11 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64] Base->{closure}()
+[19-May-2017 06:29:11 America/Chicago] [328/blogs/controller/controller.php:72] Preview->render()
+[19-May-2017 06:29:11 America/Chicago] [328/blogs/controller/controller.php:127] Base->run()
+[19-May-2017 06:29:11 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:29:57 America/Chicago] Object of class BlogPost could not be converted to string
+[19-May-2017 06:29:57 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64] Base->{closure}()
+[19-May-2017 06:29:57 America/Chicago] [328/blogs/controller/controller.php:75] Preview->render()
+[19-May-2017 06:29:57 America/Chicago] [328/blogs/controller/controller.php:130] Base->run()
+[19-May-2017 06:29:57 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:31:07 America/Chicago] Object of class BlogPost could not be converted to string
+[19-May-2017 06:31:07 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64] Base->{closure}()
+[19-May-2017 06:31:07 America/Chicago] [328/blogs/controller/controller.php:75] Preview->render()
+[19-May-2017 06:31:07 America/Chicago] [328/blogs/controller/controller.php:130] Base->run()
+[19-May-2017 06:31:07 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 06:32:37 America/Chicago] Object of class BlogPost could not be converted to string
+[19-May-2017 06:32:37 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.3vioya1sfhmog.php:64] Base->{closure}()
+[19-May-2017 06:32:37 America/Chicago] [328/blogs/controller/controller.php:75] Preview->render()
+[19-May-2017 06:32:37 America/Chicago] [328/blogs/controller/controller.php:130] Base->run()
+[19-May-2017 06:32:37 America/Chicago] [328/blogs/index.php:3] require_once()

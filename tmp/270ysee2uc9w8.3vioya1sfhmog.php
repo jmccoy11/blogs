@@ -43,13 +43,28 @@
     <div class="row content col-sm-9">
       <div class="block">
         <div id="header">
-          <h1><?= $user['name'] ?>'s Blogs</h1>
+          <h1><?= $blogger->getName() ?>'s Blogs</h1>
         </div>
         
         <div class="col-sm-8">
           <div id="most-recent">
-            <h4><a href="/328/blogs/entry?blogId=<?= $user['latestPostId'] ?>"><strong>My most recent blog:</strong></a></h4>
-            <p><?= $user['latestPost'] ?></p>
+            <?php if (!empty($posts)): ?>
+              
+                <h4><a href="/328/blogs/entry?blogId=<?= $blogger->getMostRecent() ?>">
+                <strong>My most recent blog:</strong></a></h4>
+              
+            <?php endif; ?>
+            
+            <p>
+              <?php if (empty($posts)): ?>
+                
+                  I haven't posted anything, yet.
+                
+                <?php else: ?>
+                  <?= $posts[0]->getBlogPost().PHP_EOL ?>
+                
+              <?php endif; ?>
+            </p>
           </div>
         
           <div id="my-blogs">
@@ -57,34 +72,33 @@
               <h4><strong>My blogs:</strong></h4>
             </div>
             
-            
-            <div class="bottom-border extend">
-              <h4><a href="/328/blogs/entry?blogId=1">In the words of Abraham Lincoln</a> - word count: 716 - 12/02/2007</h4>
-              <p><?= $user['latestPost'] ?></p>
-            </div>
-            
-            <div class="bottom-border extend">
-              <h4><a href="/328/blogs/entry?blogId=1">Renovating my house</a> - word count: 202 - 09/10/2007</h4>
-              <p><?= $user['latestPost'] ?></p>
-            </div>
-            
-            <div class="bottom-border extend">
-              <h4><a href="/328/blogs/entry?blogId=1">The Mariners are losing again</a> - word count: 998 - 05/04/2007</h4>
-              <p><?= $user['latestPost'] ?></p>
-            </div>
+            <?php if (empty($posts)): ?>
+                
+                  I haven't posted anything, yet.
+                
+                <?php else: ?>
+                  <?php foreach (($posts?:[]) as $value): ?>
+                    <div class="bottom-border extend">
+                      <h4><a href="/328/blogs/entry?blogId=<?= $value->getBlogId() ?>"><?= $value->getTitle() ?></a>
+                        - word count: 716 - <?= $value->getDatePosted() ?></h4>
+                      <p><?= $value->getBlogPost() ?></p>
+                    </div>
+                  <?php endforeach; ?>
+                
+             <?php endif; ?>
           </div>
         </div>
         
         <div class="col-sm-4">
           <div id="profilePic">
-            <img src="<?= $user['profilePic'] ?>" alt="profile pic" />
+            <img src="<?= $blogger->getPath() ?>" alt="profile pic" />
           </div>
           
           <div id="bio">
             <div class="center bottom-border extend">
-              <h3><strong><?= $user['name'] ?></strong></h3>
+              <h3><strong><?= $blogger->getName() ?></strong></h3>
             </div>
-            <p>Bio: <?= $user['latestPost'] ?></p>
+            <p>Bio: <?= $blogger->getBio() ?></p>
           </div>
         </div>
       </div>

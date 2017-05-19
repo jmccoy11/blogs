@@ -2,21 +2,39 @@
 
 class Blogger
 {
-  private $_name,
-    $_email,
+  private
+    $_bloggerId,
+    $_username,
+    $_name,
     $_blogCount,
     $_mostRecentBlogId,
+    $_profilePicPath,
     $_bio;
     
-  private $_blogs=array("blogId" => "blogPost");
+  private $_posts=array();
   
-  function __construct($name = "", $blogCount=0, $_mostRecent=0, $bio="", $email="")
+  function __construct($bloggerId=0, $username="", $name = "", $blogCount=0,
+                       $mostRecent=0, $profilePic="", $bio="")
   {
+    
+    $this->_bloggerId = $bloggerId;
+    $this->_username = $username;
     $this->_name = $name;
     $this->_blogCount = $blogCount;
     $this->_mostRecentBlogId = $mostRecent;
+    $this->_profilePicPath = $profilePic;
     $this->_bio = $bio;
-    $this->_email = $email;
+    
+  }
+  
+  function getId()
+  {
+    return $this->_bloggerId;
+  }
+  
+  function setId()
+  {
+    return $this->_bloggerId;
   }
   
   function getName()
@@ -39,9 +57,24 @@ class Blogger
     $this->_blogCount--;
   }
   
-  function setMostRecentBlogId($mostRecentBlogId)
+  function getMostRecent()
+  {
+    return $this->_mostRecentBlogId;
+  }
+  
+  function setMostRecent($mostRecentBlogId)
   {
     $this->_mostRecentBlogId = $mostRecentBlogId;
+  }
+  
+  function getPath()
+  {    
+    return $this->_profilePicPath;
+  }
+  
+  function setPath($profilePicPath)
+  {
+    $this->_profilePicPath = $profilePicPath;
   }
   
   function getBio()
@@ -54,13 +87,13 @@ class Blogger
     $this->_bio = $bio;
   }
   
-  function getEmail()
+  function getPosts()
   {
-    return $this->_email;
+    return $this->_posts;
   }
   
-  function setEmail($email)
+  function addPost($blogPost)
   {
-    $this->_email = $email;
+    array_push($this->_posts, $blogPost);
   }
 }

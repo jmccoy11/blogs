@@ -41,23 +41,26 @@
     <!-- Blog cards -->
     <div class="row col-md-9 col-xs-12 page-container"> <!-- separates cards from nav --> 
       
-      <!-- THIS WILL NEED TO BE CHANGED TO LOOP THROUGH THE ARRAY RECIEVED BY THE DATABASE -->
-      <loop from="{{ @i = 0 }}" to="{{ @i < 6 }}" step="{{ @i++ }}">
+      <repeat group="{{ @bloggers }}" value="{{ @value }}">
         <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
           <div class="card"> <!-- card inner boxes -->
           
-            <img src="{{ @loop['profilePic'] }}" />
-            <p class="center">{{ @loop['name'] }}</p>
+            <img src="{{ @value->getPath() }}" />
+            <p class="center">{{ @value->getName() }}</p>
             
-            <p class="top-bottom-border extend"><a href="/328/blogs/user?id={{ @loop['id'] }}">view blogs</a>
-              <span class="pull-right">Total: {{ @loop['postsCount'] }}</span></p>
+            <p class="top-bottom-border extend">
+              <a href="/328/blogs/user?id={{ @value->getId() }}">view blogs</a>
+              <span class="pull-right">Total: {{ @value->getBlogCount() }}</span></p>
             
             <p>Something from my latest blog:</p>
-            <p>{{ @loop['latestPost'] }}</p>
+            <p><check if="{{ empty(@value->getPosts()) }}">
+                  <true>I haven't posted anything, yet.</true>
+                  <false>{{ end(@value->getPosts())->getBlogPost() }}</false>
+               </check></p>
             
           </div> <!-- card -->
         </div> <!-- card box -->
-      </loop>
+      </repeat>
     </div> <!-- blogger-container -->
     
   </body>

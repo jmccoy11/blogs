@@ -3,12 +3,14 @@
 class BlogPost
 {
   private $_blogId,
+    $_title,
     $_blogPost,
     $_datePosted;
     
-    function __construct($blogId=0, $blogPost="", $datePosted="")
+    function __construct($blogId=0, $title="", $blogPost="", $datePosted="")
     {
       $this->_blogId = $blogId;
+      $this->_title = $title;
       $this->_blogPost = $blogPost;
       $this->_datePosted = $datePosted;
     }
@@ -21,6 +23,16 @@ class BlogPost
     function setBlogId($blogId)
     {
       $this->_blogId = $blogId;
+    }
+    
+    function getTitle()
+    {
+      return $this->_title;
+    }
+    
+    function setTitle($title)
+    {
+      $this->_title = $title;
     }
     
     function getBlogPost()

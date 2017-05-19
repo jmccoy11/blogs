@@ -23,4 +23,61 @@
             die( "Error!: " . $e->getMessage());
         }
     }
+    
+    function getDBContents()
+    {
+      //Define Query
+      $query = "SELECT * FROM bloggers";
+      
+      //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+      return $results;
+    }
+    
+    function getBlogger($bloggerId)
+    {
+      //Define Query
+      $query = "SELECT * FROM bloggers WHERE bloggerId = $bloggerId";
+      
+      //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+      return $results;
+    }
+    
+    function getAllPosts($bloggerId)
+    {
+      //Define Query
+      $query = "SELECT blogs.blogId, title, blogPost, datePosted FROM blogs
+                  JOIN blogger_to_blogs_junct
+                    ON blogs.blogId = blogger_to_blogs_junct.blogId
+                  WHERE
+                    bloggerId = $bloggerId";
+      
+      //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+      return $results;
+    }
+    
+    
   }
