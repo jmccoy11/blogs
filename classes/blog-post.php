@@ -35,12 +35,12 @@ class BlogPost
       $this->_title = $title;
     }
     
-    function getBlogPost()
+    function getPost()
     {
       return $this->_blogPost;
     }
     
-    function setBlogPost($blogPost)
+    function setPost($blogPost)
     {
       $this->_blogPost = $blogPost;
     }

@@ -50,7 +50,7 @@
           <div id="most-recent">
             <?php if (!empty($posts)): ?>
               
-                <h4><a href="/328/blogs/entry?blogId=<?= $blogger->getMostRecent() ?>">
+                <h4><a href="/328/blogs/entry?blogId=<?= $posts[0]->getBlogId() ?>">
                 <strong>My most recent blog:</strong></a></h4>
               
             <?php endif; ?>
@@ -61,7 +61,7 @@
                   I haven't posted anything, yet.
                 
                 <?php else: ?>
-                  <?= $posts[0]->getBlogPost().PHP_EOL ?>
+                  <?= $posts[0]->getPost().PHP_EOL ?>
                 
               <?php endif; ?>
             </p>
@@ -81,7 +81,7 @@
                     <div class="bottom-border extend">
                       <h4><a href="/328/blogs/entry?blogId=<?= $value->getBlogId() ?>"><?= $value->getTitle() ?></a>
                         - word count: 716 - <?= $value->getDatePosted() ?></h4>
-                      <p><?= $value->getBlogPost() ?></p>
+                      <p><?= $value->getPost() ?></p>
                     </div>
                   <?php endforeach; ?>
                 

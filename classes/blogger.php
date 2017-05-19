@@ -87,7 +87,7 @@ class Blogger
     $this->_bio = $bio;
   }
   
-  function getPosts()
+  function getPostsArray()
   {
     return $this->_posts;
   }

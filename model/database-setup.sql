@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS blogger_to_blogs_junct;
 CREATE TABLE users
 (
   userId        INT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  username      VARCHAR(40)  NOT NULL,
   email         VARCHAR(255)  NOT NULL,
   password      VARCHAR(50)   NOT NULL
 );
@@ -42,50 +43,36 @@ CREATE TABLE blogger_to_blogs_junct
 );
 
 INSERT INTO users
-(email, password)
+(username, email, password)
 VALUES
-('jschmoe@email.com', 'Password01'),
-('jschmoe@email.com', 'Password01'),
-('jschmoe@email.com', 'Password01'),
-('jschmoe@email.com', 'Password01'),
-('jschmoe@email.com', 'Password01'),
-('jschmoe@email.com', 'Password01'),
-('jschmoe@email.com', 'Password01');
+('jshmoe1', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531'),
+('jshmoe2', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531'),
+('jshmoe3', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531'),
+('jshmoe4', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531'),
+('jshmoe5', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531'),
+('jshmoe6', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531'),
+('jshmoe7', 'jschmoe@email.com', 'c464af817287343305cbd6493c593885695df531');
 
 INSERT INTO bloggers
 VALUES
-(1, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.'),
-(2, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.'),
-(3, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.'),
-(4, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.'),
-(5, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.'),
-(6, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.'),
-(7, 'jshmoe', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.');
+(1, 'jshmoe1', 'Joe Schmoe Blogger', 3, 3, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(2, 'jshmoe2', 'Joe Schmoe Blogger', 1, 4, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(3, 'jshmoe3', 'Joe Schmoe Blogger', 1, 5, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(4, 'jshmoe4', 'Joe Schmoe Blogger', 1, 6, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(5, 'jshmoe5', 'Joe Schmoe Blogger', 1, 7, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(6, 'jshmoe6', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(7, 'jshmoe7', 'Joe Schmoe Blogger', 0, 0, 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.');
 
 INSERT INTO blogs
 (title, blogPost, datePosted)
 VALUES
-('The Mariners are losing again', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017'),
-('Renovating my house', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017'),
-('In the words of Abraham Lincoln', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017'),
-('Title 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017'),
-('Title 5', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017'),
-('Title 6', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017'),
-('Title 7', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                                sodales commodo.','5/19/2017');
+('The Mariners are losing again', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor sodales commodo.','5/19/2017'),
+('Renovating my house', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor sodales commodo.','5/19/2017'),
+('In the words of Abraham Lincoln', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.','5/19/2017'),
+('Title 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor sodales commodo.','5/19/2017'),
+('Title 5', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor sodales commodo.','5/19/2017'),
+('Title 6', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor sodales commodo.','5/19/2017'),
+('Title 7', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor sodales commodo.','5/19/2017');
 
 INSERT INTO blogger_to_blogs_junct
 VALUES

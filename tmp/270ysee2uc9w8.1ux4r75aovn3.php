@@ -38,10 +38,10 @@
   </head>
   <body>
     <!-- Navbar -->
-    <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
+    <?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
     
     <!-- Blog entry -->
-    <div class="row col-sm-10 col-xs-12 page-container">
+    <div class="row col-sm-9 page-container">
       <div class="block">
         <img src="images/lock.png" alt="Blog Logo" />
         <h1><strong>Welcome Back!</strong></h1>

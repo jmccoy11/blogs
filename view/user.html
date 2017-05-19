@@ -50,7 +50,7 @@
           <div id="most-recent">
             <check if="{{ !empty(@posts) }}">
               <true>
-                <h4><a href="/328/blogs/entry?blogId={{ @blogger->getMostRecent() }}">
+                <h4><a href="/328/blogs/entry?blogId={{ @posts[0]->getBlogId() }}">
                 <strong>My most recent blog:</strong></a></h4>
               </true>
             </check>
@@ -61,7 +61,7 @@
                   I haven't posted anything, yet.
                 </true>
                 <false>
-                  {{ @posts[0]->getBlogPost() }}
+                  {{ @posts[0]->getPost() }}
                 </false>
               </check>
             </p>
@@ -81,7 +81,7 @@
                     <div class="bottom-border extend">
                       <h4><a href="/328/blogs/entry?blogId={{ @value->getBlogId() }}">{{ @value->getTitle() }}</a>
                         - word count: 716 - {{ @value->getDatePosted() }}</h4>
-                      <p>{{ @value->getBlogPost() }}</p>
+                      <p>{{ @value->getPost() }}</p>
                     </div>
                   </repeat>
                 </false>

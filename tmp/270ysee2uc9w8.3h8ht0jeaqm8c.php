@@ -36,7 +36,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
+    <?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
     
     <!-- Blog cards -->
     <div class="row col-md-9 col-xs-12 page-container"> <!-- separates cards from nav --> 
@@ -53,9 +53,9 @@
               <span class="pull-right">Total: <?= $value->getBlogCount() ?></span></p>
             
             <p>Something from my latest blog:</p>
-            <p><?php if (empty($value->getPosts())): ?>
+            <p><?php if (empty($value->getPostsArray())): ?>
                   I haven't posted anything, yet.
-                  <?php else: ?><?= end($value->getPosts())->getBlogPost() ?>
+                  <?php else: ?><?= end($value->getPostsArray())->getPost() ?>
                <?php endif; ?></p>
             
           </div> <!-- card -->

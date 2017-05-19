@@ -36,7 +36,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <include href="includes/navbar.inc.html" />
+    <include href="{{ @navbar }}" />
     
     <!-- Blog cards -->
     <div class="row col-md-9 col-xs-12 page-container"> <!-- separates cards from nav --> 
@@ -53,9 +53,9 @@
               <span class="pull-right">Total: {{ @value->getBlogCount() }}</span></p>
             
             <p>Something from my latest blog:</p>
-            <p><check if="{{ empty(@value->getPosts()) }}">
+            <p><check if="{{ empty(@value->getPostsArray()) }}">
                   <true>I haven't posted anything, yet.</true>
-                  <false>{{ end(@value->getPosts())->getBlogPost() }}</false>
+                  <false>{{ end(@value->getPostsArray())->getPost() }}</false>
                </check></p>
             
           </div> <!-- card -->

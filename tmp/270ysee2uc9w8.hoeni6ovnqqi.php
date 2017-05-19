@@ -41,12 +41,12 @@
     <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
     
     <!-- Blog entry -->
-    <div class="row col-sm-10 col-xs-12 page-container">
+    <div class="row col-sm-8 page-container">
       <div id="entry">
-        <img src="<?= $entry['profilePic'] ?>" alt="profile pic" />
-        <h1 class="center"><strong><?= $entry['blogTitle'] ?></strong></a></h4>
+        <img src="<?= $profilePic ?>" alt="profile pic" />
+        <h1 class="center"><strong><?= $post->getTitle() ?></strong></a></h4>
         <br />
-        <p><?= $entry['entryData'] ?></p>
+        <p><?= $post->getPost() ?></p>
       </div>
     </div>
   </body>

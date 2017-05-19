@@ -41,7 +41,7 @@
       return $results;
     }
     
-    function getBlogger($bloggerId)
+    function getBloggerById($bloggerId)
     {
       //Define Query
       $query = "SELECT * FROM bloggers WHERE bloggerId = $bloggerId";
@@ -79,5 +79,89 @@
       return $results;
     }
     
+    function getPostByID($blogId)
+    {
+      $query = "SELECT bloggers.bloggerId, blogs.blogId, blogs.title, blogs.blogPost,
+          blogs.datePosted, bloggers.profilePicPath
+            FROM blogs
+            JOIN blogger_to_blogs_junct
+              ON blogs.blogId = blogger_to_blogs_junct.blogId
+            JOIN bloggers
+              ON blogger_to_blogs_junct.bloggerId = bloggers.bloggerId
+            WHERE blogs.blogId = $blogId";
+      
+      //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+      
+      return $results;
+    }
     
+    function checkUsername($username)
+    {
+      if($username == "" || $username == NULL)
+      {
+        return array(false, -1);
+      }
+      
+      $query = "SELECT userId, username FROM users";
+      
+       //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+      $valid = array(false, -1);
+      
+      foreach($results as $row)
+      {
+        if($row['username'] == $username)
+        {
+          $valid = array(true, $row['userId']);
+        }
+      }
+      
+      return $valid;
+    }
+    
+    function checkPassword($bloggerId, $password)
+    {
+      $query = "SELECT userId, password FROM users WHERE userId = $bloggerId";
+      
+       //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+      $dbPassword = $results[0]['password'];
+      
+      //echo "<pre>";
+      //echo var_dump($results);
+      //echo $dbPassword . "<br>";
+      //echo sha1($password) . "<br>";
+      //echo sha1($row['password']) . "<br>";
+      //echo "</pre>";
+      
+      foreach($results as $row)
+      {
+        if($dbPassword == sha1($password))
+        {
+          echo true;
+          return true;
+        }
+      }
+      echo false;
+      return false;
+    }
   }

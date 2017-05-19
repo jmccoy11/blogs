@@ -19,10 +19,10 @@
                                        $post['datePosted']));
     }
     
-    if(!empty($dbBlogger->getPosts()))
+    if(!empty($dbBlogger->getPostsArray()))
     {
       //set the most Recent blog to the last one in the Blogger _posts array
-      $dbBlogger->setMostRecent(end($dbBlogger->getPosts())->getBlogPost());
+      $dbBlogger->setMostRecent(end($dbBlogger->getPostsArray())->getPost());
     }
     
     //push the $dbBlogger object into $bloggers array
