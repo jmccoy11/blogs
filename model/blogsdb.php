@@ -106,7 +106,7 @@
     {
       if($username == "" || $username == NULL)
       {
-        return array(false, -1);
+        return array($username, false, -1);
       }
       
       $query = "SELECT userId, username FROM users";
@@ -119,13 +119,13 @@
       
       //Retrieve Results
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-      $valid = array(false, -1);
+      $valid = array($username, false, -2);
       
       foreach($results as $row)
       {
         if($row['username'] == $username)
         {
-          $valid = array(true, $row['userId']);
+          $valid = array($username, false, 0, $row['userId']);
         }
       }
       
@@ -157,11 +157,10 @@
       {
         if($dbPassword == sha1($password))
         {
-          echo true;
-          return true;
+          return 0;
         }
       }
-      echo false;
-      return false;
+      
+      return -3;
     }
   }

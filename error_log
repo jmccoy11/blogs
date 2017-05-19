@@ -926,3 +926,71 @@
 [19-May-2017 13:26:19 America/Chicago] Call to undefined function vardump() [/home/jmccoy/public_html/328/blogs/controller/controller.php:181]
 [19-May-2017 13:26:19 America/Chicago] [328/blogs/controller/controller.php:249] Base->run()
 [19-May-2017 13:26:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 13:34:45 America/Chicago] Unable to open includes/navbar.inc.html
+[19-May-2017 13:34:45 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.6zbgje6e992x.php:41] Preview->render()
+[19-May-2017 13:34:45 America/Chicago] [328/blogs/controller/controller.php:140] Preview->render()
+[19-May-2017 13:34:45 America/Chicago] [328/blogs/controller/controller.php:246] Base->run()
+[19-May-2017 13:34:45 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 13:39:17 America/Chicago] Unable to open 
+[19-May-2017 13:39:17 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.jbxpztlbqjnn.php:41] Preview->render()
+[19-May-2017 13:39:17 America/Chicago] [328/blogs/controller/controller.php:216] Preview->render()
+[19-May-2017 13:39:17 America/Chicago] [328/blogs/controller/controller.php:246] Base->run()
+[19-May-2017 13:39:17 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 13:44:28 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 36
+[19-May-2017 13:44:42 America/Chicago] Unable to open 
+[19-May-2017 13:44:42 America/Chicago] [328/blogs/tmp/270ysee2uc9w8.1ux4r75aovn3.php:41] Preview->render()
+[19-May-2017 13:44:42 America/Chicago] [328/blogs/controller/controller.php:138] Preview->render()
+[19-May-2017 13:44:42 America/Chicago] [328/blogs/controller/controller.php:217] Base->run()
+[19-May-2017 13:44:42 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 14:55:43 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 138
+[19-May-2017 14:55:59 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 143
+[19-May-2017 14:56:20 America/Chicago] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 169
+[19-May-2017 14:56:48 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 184
+[19-May-2017 14:56:59 America/Chicago] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 192
+[19-May-2017 14:59:25 America/Chicago] HTTP 405 (POST /login)
+[19-May-2017 14:59:25 America/Chicago] [328/blogs/controller/controller.php:253] Base->run()
+[19-May-2017 14:59:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:00:21 America/Chicago] HTTP 405 (POST /login)
+[19-May-2017 15:00:21 America/Chicago] [328/blogs/controller/controller.php:253] Base->run()
+[19-May-2017 15:00:21 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:01:51 America/Chicago] Call to undefined function mysql_real_escape_string() [/home/jmccoy/public_html/328/blogs/controller/controller.php:158]
+[19-May-2017 15:01:51 America/Chicago] [328/blogs/controller/controller.php:253] Base->run()
+[19-May-2017 15:01:51 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:02:26 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 162
+[19-May-2017 15:02:39 America/Chicago] Missing argument 2 for BlogsDB::checkPassword(), called in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 181 and defined
+[19-May-2017 15:02:39 America/Chicago] [328/blogs/model/blogsdb.php:135] Base->{closure}()
+[19-May-2017 15:02:39 America/Chicago] [328/blogs/controller/controller.php:181] BlogsDB->checkPassword()
+[19-May-2017 15:02:39 America/Chicago] [328/blogs/controller/controller.php:251] Base->run()
+[19-May-2017 15:02:39 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:04:25 America/Chicago] stripslashes() expects exactly 1 parameter, 2 given
+[19-May-2017 15:04:25 America/Chicago] [328/blogs/controller/controller.php:181] stripslashes()
+[19-May-2017 15:04:25 America/Chicago] [328/blogs/controller/controller.php:251] Base->run()
+[19-May-2017 15:04:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:04:51 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 180
+[19-May-2017 15:05:00 America/Chicago] Missing argument 2 for BlogsDB::checkPassword(), called in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 180 and defined
+[19-May-2017 15:05:00 America/Chicago] [328/blogs/model/blogsdb.php:135] Base->{closure}()
+[19-May-2017 15:05:00 America/Chicago] [328/blogs/controller/controller.php:180] BlogsDB->checkPassword()
+[19-May-2017 15:05:00 America/Chicago] [328/blogs/controller/controller.php:250] Base->run()
+[19-May-2017 15:05:00 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:05:53 America/Chicago] htmlspecialchars() expects parameter 2 to be integer, string given
+[19-May-2017 15:05:53 America/Chicago] [328/blogs/controller/controller.php:180] htmlspecialchars()
+[19-May-2017 15:05:53 America/Chicago] [328/blogs/controller/controller.php:250] Base->run()
+[19-May-2017 15:05:53 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:07:12 America/Chicago] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ',' or ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 180
+[19-May-2017 15:07:36 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 180
+[19-May-2017 15:09:00 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:143]
+[19-May-2017 15:09:00 America/Chicago] [328/blogs/model/blogsdb.php:143] PDOStatement->execute()
+[19-May-2017 15:09:00 America/Chicago] [328/blogs/controller/controller.php:180] BlogsDB->checkPassword()
+[19-May-2017 15:09:00 America/Chicago] [328/blogs/controller/controller.php:250] Base->run()
+[19-May-2017 15:09:00 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:10:30 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:146]
+[19-May-2017 15:10:30 America/Chicago] [328/blogs/model/blogsdb.php:146] PDOStatement->execute()
+[19-May-2017 15:10:30 America/Chicago] [328/blogs/controller/controller.php:180] BlogsDB->checkPassword()
+[19-May-2017 15:10:30 America/Chicago] [328/blogs/controller/controller.php:250] Base->run()
+[19-May-2017 15:10:30 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:11:15 America/Chicago] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:143]
+[19-May-2017 15:11:15 America/Chicago] [328/blogs/model/blogsdb.php:143] PDOStatement->execute()
+[19-May-2017 15:11:15 America/Chicago] [328/blogs/controller/controller.php:183] BlogsDB->checkPassword()
+[19-May-2017 15:11:15 America/Chicago] [328/blogs/controller/controller.php:253] Base->run()
+[19-May-2017 15:11:15 America/Chicago] [328/blogs/index.php:3] require_once()
+[19-May-2017 15:21:58 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/jmccoy/public_html/328/blogs/controller/controller.php on line 157

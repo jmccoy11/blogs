@@ -38,7 +38,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <?php echo $this->render('includes/navbar.inc.html',NULL,get_defined_vars(),0); ?>
+    <?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
     
     <!-- Blog entry -->
     <div class="row col-sm-9 page-container">

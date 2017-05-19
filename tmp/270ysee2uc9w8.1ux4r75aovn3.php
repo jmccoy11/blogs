@@ -50,16 +50,16 @@
       </div>
       <div class="block">
         <div id="form" >
-          <form action="#" method="POST">
+          <form action="/328/blogs/verify" method="POST">
             <div id="form-input-group">
               <div class="form-input-field">
-                <input id="username" name="username" placeholder=""
+                <input id="username" name="username" placeholder="<?= $usernameErr ?>"
                        type="text" class="col-xs-9" tabindex=1 autocomplete="off">
                 <label for="username" class="col-xs-3">Username</label><br />
               </div>
               
               <div class="form-input-field">
-                <input id="password" name="password" placeholder=""
+                <input id="password" name="password" placeholder="<?= $passwordErr ?>"
                        type="password" class="col-xs-9" tabindex=2
                        autocomplete="new-password">
                 <label for="password" class="col-xs-3">Password</label><br />
