@@ -1,6 +1,5 @@
 <?php
-  
-    
+
   /*
    * Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
    * Date: 5/16/2017

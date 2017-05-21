@@ -1626,3 +1626,148 @@
 [21-May-2017 10:38:41 America/Chicago] HTTP 404 (GET /blogs.js)
 [21-May-2017 10:38:41 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
 [21-May-2017 10:38:41 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 11:59:27 America/Chicago] strlen() expects parameter 1 to be string, object given
+[21-May-2017 11:59:27 America/Chicago] [328/blogs/includes/controller-logic.inc.php:55] Base->{closure}()
+[21-May-2017 11:59:27 America/Chicago] [328/blogs/controller/controller.php:46] reversePosts()
+[21-May-2017 11:59:27 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 11:59:27 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 12:01:35 America/Chicago] Cannot use object of type BlogPost as array [/home/jmccoy/public_html/328/blogs/includes/controller-logic.inc.php:55]
+[21-May-2017 12:01:35 America/Chicago] [328/blogs/controller/controller.php:46] reversePosts()
+[21-May-2017 12:01:35 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 12:01:35 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 12:15:32 America/Chicago] syntax error, unexpected '}', expecting end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:34]
+[21-May-2017 12:15:32 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 12:15:32 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 12:15:32 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 13:48:30 America/Chicago] nl2br() expects parameter 1 to be string, object given
+[21-May-2017 13:48:30 America/Chicago] [328/blogs/includes/controller-logic.inc.php:61] nl2br()
+[21-May-2017 13:48:30 America/Chicago] [328/blogs/controller/controller.php:110] reversePosts()
+[21-May-2017 13:48:30 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 13:48:30 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 13:59:15 America/Chicago] syntax error, unexpected ';', expecting ',' or ')' [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:24]
+[21-May-2017 13:59:15 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 13:59:15 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 13:59:15 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 13:59:35 America/Chicago] substr_count(): Length value 160 exceeds string length
+[21-May-2017 13:59:35 America/Chicago] [328/blogs/includes/objectCreation.inc.php:24] substr_count()
+[21-May-2017 13:59:35 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 13:59:35 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 13:59:35 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 13:59:35 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:00:19 America/Chicago] substr_count(): Offset should be greater than or equal to 0
+[21-May-2017 14:00:19 America/Chicago] [328/blogs/includes/objectCreation.inc.php:24] substr_count()
+[21-May-2017 14:00:19 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 14:00:19 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:00:19 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:00:19 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:01:06 America/Chicago] substr_count(): Length value 4 exceeds string length
+[21-May-2017 14:01:06 America/Chicago] [328/blogs/includes/objectCreation.inc.php:24] substr_count()
+[21-May-2017 14:01:06 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 14:01:06 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:01:06 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:01:06 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:08:01 America/Chicago] substr_count(): Length value 150 exceeds string length
+[21-May-2017 14:08:01 America/Chicago] [328/blogs/includes/objectCreation.inc.php:24] substr_count()
+[21-May-2017 14:08:01 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 14:08:01 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:08:01 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:08:01 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:08:58 America/Chicago] substr_count(): Length value 100 exceeds string length
+[21-May-2017 14:08:58 America/Chicago] [328/blogs/includes/objectCreation.inc.php:24] substr_count()
+[21-May-2017 14:08:58 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 14:08:58 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:08:58 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:08:58 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:09:13 America/Chicago] substr_count(): Length value 100 exceeds string length
+[21-May-2017 14:09:13 America/Chicago] [328/blogs/includes/objectCreation.inc.php:24] substr_count()
+[21-May-2017 14:09:13 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 14:09:13 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:09:13 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:09:13 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:22:28 America/Chicago] syntax error, unexpected '{', expecting ')' [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:26]
+[21-May-2017 14:22:28 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:22:28 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:22:28 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:22:42 America/Chicago] syntax error, unexpected 'if' (T_IF) [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:27]
+[21-May-2017 14:22:42 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:22:42 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:22:42 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:23:54 America/Chicago] strpos() expects at least 2 parameters, 1 given
+[21-May-2017 14:23:54 America/Chicago] [328/blogs/includes/objectCreation.inc.php:27] strpos()
+[21-May-2017 14:23:54 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 14:23:54 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:23:54 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:23:54 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:27:36 America/Chicago] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php on line 27
+[21-May-2017 14:27:36 America/Chicago] Fatal error: Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+[21-May-2017 14:27:36 America/Chicago] [328/blogs/includes/objectCreation.inc.php:27] 
+[21-May-2017 14:31:20 America/Chicago] syntax error, unexpected end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:55]
+[21-May-2017 14:31:20 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:31:20 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:31:20 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 14:43:37 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 183943168 bytes) in /home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php on line 32
+[21-May-2017 14:43:37 America/Chicago] Fatal error: Allowed memory size of 268435456 bytes exhausted (tried to allocate 183943168 bytes)
+[21-May-2017 14:43:37 America/Chicago] [328/blogs/includes/objectCreation.inc.php:32] 
+[21-May-2017 14:43:37 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 183943168 bytes) in /home/jmccoy/public_html/328/blogs/vendor/bcosca/fatfree-core/base.php on line 1256
+[21-May-2017 14:59:34 America/Chicago] syntax error, unexpected '}', expecting end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:65]
+[21-May-2017 14:59:34 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 14:59:34 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 14:59:34 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 15:00:04 America/Chicago] syntax error, unexpected '}', expecting end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:73]
+[21-May-2017 15:00:04 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 15:00:04 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 15:00:04 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 15:00:57 America/Chicago] substr() expects at least 2 parameters, 1 given
+[21-May-2017 15:00:57 America/Chicago] [328/blogs/includes/objectCreation.inc.php:30] substr()
+[21-May-2017 15:00:57 America/Chicago] [328/blogs/includes/controller-logic.inc.php:41] include_once()
+[21-May-2017 15:00:57 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 15:00:57 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 15:00:57 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 15:07:01 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php on line 31
+[21-May-2017 15:07:01 America/Chicago] Fatal error: Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes)
+[21-May-2017 15:07:01 America/Chicago] [328/blogs/includes/objectCreation.inc.php:31] 
+[21-May-2017 15:07:01 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 132136960 bytes) in /home/jmccoy/public_html/328/blogs/vendor/bcosca/fatfree-core/base.php on line 1256
+[21-May-2017 15:07:34 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 133611520 bytes) in /home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php on line 31
+[21-May-2017 15:07:34 America/Chicago] Fatal error: Allowed memory size of 268435456 bytes exhausted (tried to allocate 133611520 bytes)
+[21-May-2017 15:07:34 America/Chicago] [328/blogs/includes/objectCreation.inc.php:31] 
+[21-May-2017 15:07:34 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 133611520 bytes) in /home/jmccoy/public_html/328/blogs/vendor/bcosca/fatfree-core/base.php on line 1256
+[21-May-2017 15:14:15 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 142000128 bytes) in /home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php on line 33
+[21-May-2017 15:14:15 America/Chicago] Fatal error: Allowed memory size of 268435456 bytes exhausted (tried to allocate 142000128 bytes)
+[21-May-2017 15:14:15 America/Chicago] [328/blogs/includes/objectCreation.inc.php:33] 
+[21-May-2017 15:14:15 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 142000128 bytes) in /home/jmccoy/public_html/328/blogs/vendor/bcosca/fatfree-core/base.php on line 1256
+[21-May-2017 15:17:43 America/Chicago] syntax error, unexpected '$pos' (T_VARIABLE), expecting ',' or ';' [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:33]
+[21-May-2017 15:17:43 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 15:17:43 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 15:17:43 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 15:27:14 America/Chicago] syntax error, unexpected ';', expecting ',' or ')' [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:25]
+[21-May-2017 15:27:14 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 15:27:14 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 15:27:14 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 15:32:18 America/Chicago] syntax error, unexpected end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:75]
+[21-May-2017 15:32:18 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 15:32:18 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 15:32:18 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 15:32:48 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 209108992 bytes) in /home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php on line 34
+[21-May-2017 15:32:48 America/Chicago] Fatal error: Allowed memory size of 268435456 bytes exhausted (tried to allocate 209108992 bytes)
+[21-May-2017 15:32:48 America/Chicago] [328/blogs/includes/objectCreation.inc.php:34] 
+[21-May-2017 15:32:48 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 209108992 bytes) in /home/jmccoy/public_html/328/blogs/vendor/bcosca/fatfree-core/base.php on line 1256
+[21-May-2017 16:02:11 America/Chicago] syntax error, unexpected 'else' (T_ELSE) [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:43]
+[21-May-2017 16:02:11 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 16:02:11 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 16:02:11 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 16:20:20 America/Chicago] syntax error, unexpected '}' [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:63]
+[21-May-2017 16:20:20 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 16:20:20 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 16:20:20 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 16:51:16 America/Chicago] syntax error, unexpected 'else' (T_ELSE) [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:36]
+[21-May-2017 16:51:16 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 16:51:16 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 16:51:16 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 16:59:12 America/Chicago] syntax error, unexpected end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:143]
+[21-May-2017 16:59:12 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 16:59:12 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 16:59:12 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 17:11:51 America/Chicago] syntax error, unexpected end of file [/home/jmccoy/public_html/328/blogs/includes/objectCreation.inc.php:200]
+[21-May-2017 17:11:51 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
+[21-May-2017 17:11:51 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
+[21-May-2017 17:11:51 America/Chicago] [328/blogs/index.php:3] require_once()

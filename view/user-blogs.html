@@ -48,7 +48,7 @@
                 <tbody>
                   <repeat group="{{ @posts }}" value="{{ @post }}">
                     <tr>
-                      <td>{{ @post->getTitle() }}</td>
+                      <td><a href="/328/blogs/entry?blogId={{ @post->getBlogId() }}">{{ @post->getTitle() }}</a></td>
                       <td><a href="/328/blogs/edit?blogId={{ @post->getBlogId() }}">
                         <span class="glyphicon glyphicon-wrench"></span></a></td>
                       <td><a href="/328/blogs/delete?blogId={{ @post->getBlogId() }}">

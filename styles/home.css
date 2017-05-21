@@ -7,6 +7,7 @@
   }
   
   .card {
+    overflow: hidden;
     padding: 1em;
     background: var(--grey);
     min-height: 400px;
@@ -16,7 +17,7 @@
   .card img {
     height: 50%;
     width: 100%;
-    max-height: 200px;
+    max-height: 175px;
   }
   
   .blog-count {

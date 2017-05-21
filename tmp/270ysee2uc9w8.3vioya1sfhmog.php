@@ -89,7 +89,7 @@
         </div>
         
         <div class="col-sm-4">
-          <div id="profilePic">
+          <div class="center" id="profilePic">
             <img src="<?= $blogger->getPath() ?>" alt="profile pic" />
           </div>
           

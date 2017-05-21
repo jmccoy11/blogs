@@ -17,7 +17,7 @@
     $dbResults = $GLOBALS['blogsDB']->getPostById($_GET['blogId']);
     
     foreach($dbResults as $row){
-      $post = new BlogPost($row['blogId'], $row['title'], $row['blogPost'],
+      $post = new BlogPost($row['blogId'], $row['title'], nl2br($row['blogPost']),
                            $row['datePosted']);
     }
     
@@ -38,7 +38,7 @@
     }
     
     //create Blogger and BlogPost objects
-    include("includes/objectCreation.inc.php");
+    include_once("includes/objectCreation.inc.php");
     
     //set $bloggers array as an f3 variable
     $f3->set('bloggers' , $bloggers);
@@ -52,7 +52,15 @@
     if(!empty($blogger[0]->getPostsArray())){
       $posts = $blogger[0]->getPostsArray();
       for($i = count($posts)-1; $i >= 0; $i--){
-        array_push($revPosts, $posts[$i]);
+        $postStr = $posts[$i]->getPost();
+        if (strlen($postStr) > 300) {
+          $truncated = nl2br(substr($postStr, 0, 300) . "...");
+          $posts[$i]->setPost($truncated);
+          array_push($revPosts, $posts[$i]);
+        } else {
+          $posts[$i]->setPost(nl2br($posts[$i]->getPost()));
+          array_push($revPosts, $posts[$i]);
+        }
       }
     }
       
@@ -265,60 +273,65 @@
       }
     }
     
-    $target_dir = "user-images/";
-    $target_file = $target_dir . basename($_FILES["profilePic"]["name"]);
-    
-    $uploadOk = 1;
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-    // Check if image file is a actual image or fake image
-    if(isset($_POST["submit"])) {
-        $check = getimagesize($_FILES["profilePic"]["tmp_name"]);
-        if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
-            $uploadOk = 1;
-        } else {
-            echo "File is not an image.";
-            $uploadOk = 0;
-        }
-    }
-    // Check if file already exists
-    if (file_exists($target_file)) {
-        echo "Sorry, file already exists.";
-        $uploadOk = 0;
-    }
-    // Check file size
-    if ($_FILES["profilePic"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
-    // Allow certain file formats
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" ) {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        $uploadOk = 0;
-    }
-    // Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-        echo "Sorry, your file was not uploaded.";
-    // if everything is ok, try to upload file
-    } else {
-        if (move_uploaded_file($_FILES["profilePic"]["tmp_name"], $target_file)) {
-            echo "The file ". basename( $_FILES["profilePic"]["name"]). " has been uploaded.";
-        } else {
-            echo "Sorry, there was an error uploading your file.";
-        }
-    }
-
     if($okToCreate == $threshold) {
-      $newBlogger = new Blogger(0, $username, $name, 0, 0, '0000-00-00', $target_file, $bio);
+      $target_dir = "user-images/$username/";
+      $target_file = $target_dir . basename($_FILES["profilePic"]["name"]);
       
-      $newId = $GLOBALS['blogsDB']->addUser($newBlogger, $email, $password1);
-      
-      $_SESSION['guest'] = false;
-      $_SESSION['bloggerId'] = $newId;
-      $route = "Location: http://jmccoy.greenrivertech.net/328/blogs/user-blogs?bloggerId=".$newId;
-    } else {
-      $route = "Location: http://jmccoy.greenrivertech.net/328/blogs/new";
+      $uploadOk = 1;
+      $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+      // Check if image file is a actual image or fake image
+      if(isset($_POST["submit"])) {
+          $check = getimagesize($_FILES["profilePic"]["tmp_name"]);
+          if($check !== false) {
+              //echo "File is an image - " . $check["mime"] . ".";
+              $uploadOk = 1;
+          } else {
+              //echo "File is not an image.";
+              $uploadOk = 0;
+          }
+      }
+      $dir_exists = true;
+      //create the username's directory
+      if (!is_dir($target_dir)) {
+        mkdir('./user-images/' . $username, 0777, true);
+      }
+      // Check if file already exists
+      if (file_exists($target_file)) {
+          //echo "Sorry, file already exists.";
+          $uploadOk = 0;
+      }
+      // Check file size
+      if ($_FILES["profilePic"]["size"] > 500000) {
+          //echo "Sorry, your file is too large.";
+          $uploadOk = 0;
+      }
+      // Allow certain file formats
+      if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+      && $imageFileType != "gif" ) {
+          //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+          $uploadOk = 0;
+      }
+      // Check if $uploadOk is set to 0 by an error
+      if ($uploadOk == 0) {
+          //echo "Sorry, your file was not uploaded.";
+      // if everything is ok, try to upload file
+      } else {
+          if (move_uploaded_file($_FILES["profilePic"]["tmp_name"], $target_file)) {
+            //echo "The file ". basename( $_FILES["profilePic"]["name"]). " has been uploaded.";
+            
+            $newBlogger = new Blogger(0, $username, $name, 0, 0, '0000-00-00', $target_file, $bio);
+    
+            $newId = $GLOBALS['blogsDB']->addUser($newBlogger, $email, $password1);
+            
+            $_SESSION['guest'] = false;
+            $_SESSION['bloggerId'] = $newId;
+            $route = "Location: http://jmccoy.greenrivertech.net/328/blogs/user-blogs?bloggerId=".$newId;
+          } else {
+              //echo "Sorry, there was an error uploading your file.";
+              rmdir('./user-images/' . $username);
+              $route = "Location: http://jmccoy.greenrivertech.net/328/blogs/new";
+          }
+      }
     }
      
      return $route;
