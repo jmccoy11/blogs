@@ -11,10 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     
-<!-- TODO: implement this
-    <link rel="shortcut icon" href="images/heart-icon.png"> -->
-
-    <title>The Blog Site - View User</title>
+    <title>The Blog Site - Blogger</title>
+    <link rel="shortcut icon" href="images/trumpet.png">
     <meta name="description" content="A blogging site for Green River College class IT328">
     <meta name="author" content="Jonnathon McCoy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,7 +78,8 @@
                   <repeat group="{{ @posts }}" value="{{ @value }}">
                     <div class="bottom-border extend">
                       <h4><a href="/328/blogs/entry?blogId={{ @value->getBlogId() }}">{{ @value->getTitle() }}</a>
-                        - word count: 716 - {{ @value->getDatePosted() }}</h4>
+                        - word count: {{ @value->getWordCount() }} -
+                        {{ date('m/d/Y', strtotime(@value->getDatePosted())) }}</h4>
                       <p>{{ @value->getPost() }}</p>
                     </div>
                   </repeat>

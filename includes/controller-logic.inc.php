@@ -269,8 +269,7 @@
     }
     
     if($okToCreate == $threshold) {
-      echo "Name is: ".$name;
-      $newBlogger = new Blogger(0, $username, $name, 0, 0, $imagePath, $bio);
+      $newBlogger = new Blogger(0, $username, $name, 0, 0, '0000-00-00', $imagePath, $bio);
       
       $newId = $GLOBALS['blogsDB']->addUser($newBlogger, $email, $password1);
       
@@ -284,8 +283,62 @@
      return $route;
   }
   
-  function insertToDatabase() {
+  function createBlog() {
     
+    if(isSet($_POST['title'])) {
+      $title = scrubData($_POST['title']);
+    } else {
+      $title = "";
+    }
+    if(isSet($_POST['blogEntry'])) {
+      $blogEntry = scrubData($_POST['blogEntry']);
+    } else {
+      $blogEntry = "";
+    }
+    
+    $bloggerId = $_SESSION['bloggerId'];
+    $blogPost = new BlogPost(0, $title, $blogEntry, date("Y-m-d"));
+    
+    $GLOBALS['blogsDB']->addBlog($bloggerId, $blogPost);
+    
+    $route="Location: http://jmccoy.greenrivertech.net/328/blogs/user-blogs?bloggerId=$bloggerId";
+    
+    return $route;
+  }
+  
+  function deleteBlog($blogId) {
+    if(isSet($blogId)) {
+      $title = scrubData($blogId);
+    }
+    
+    $GLOBALS['blogsDB']->deleteBlog($blogId);
+  }
+  
+  function GetBlogPostData($f3, $blogId) {
+    if(isSet($blogId)){
+      $blogId = scrubData($blogId);
+    }
+    
+    $results = $GLOBALS['blogsDB']->getPostById($blogId);
+    
+    $blogPost = new BlogPost($blogId, $results[0]['title'], $results[0]['blogPost'],
+                             $results[0]['datePosted']);
+
+    
+    $f3->set('blogPost', $blogPost);
+  }
+  
+  function updateBlog($blogId, $title, $blogEntry) {
+    if(isSet($_POST['title'])) {
+      $title = scrubData($title);
+    } 
+    if(isSet($_POST['blogEntry'])) {
+      $blogEntry = scrubData($blogEntry);
+    }
+    
+    $blogPost = new BlogPost($blogId, $title, $blogEntry, date('Y-m-d'));
+  
+    $GLOBALS['blogsDB']->updateBlog($blogPost);
   }
   
   function scrubData($data) {

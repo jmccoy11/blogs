@@ -8,13 +8,14 @@ class Blogger
     $_name,
     $_blogCount,
     $_mostRecentBlogId,
+    $_mostRecentBlogDate,
     $_profilePicPath,
     $_bio;
     
   private $_posts=array();
   
   function __construct($bloggerId=0, $username="", $name="", $blogCount=0,
-                       $mostRecent=0, $profilePic="", $bio="")
+                       $mostRecent=0, $mostRecentBlogDate = "0000-00-00", $profilePic="", $bio="")
   {
     
     $this->_bloggerId = $bloggerId;
@@ -22,6 +23,7 @@ class Blogger
     $this->_name = $name;
     $this->_blogCount = $blogCount;
     $this->_mostRecentBlogId = $mostRecent;
+    $this->_mostRecentBlogDate = $mostRecentBlogDate;
     $this->_profilePicPath = $profilePic;
     $this->_bio = $bio;
     
@@ -70,6 +72,11 @@ class Blogger
   function setMostRecent($mostRecentBlogId)
   {
     $this->_mostRecentBlogId = $mostRecentBlogId;
+  }
+  
+  function getMostRecentBlogDate()
+  {
+    return $this->_mostRecentBlogDate;
   }
   
   function getPath()

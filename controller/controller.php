@@ -120,32 +120,46 @@
   });
   
   
-  $f3->route('POST /insert', function($f3)) {
+  $f3->route('POST /insert', function($f3) {
     
-    $route = insertToDatabase();
+    $route = createBlog();
     
     header("$route");
     exit();
-  }
+  });
   
   
   $f3->route('GET /edit', function($f3) {
     
     loadNavbar($f3);
+    getBlogPostData($f3, $_GET['blogId']);
     
     echo Template::instance()->render('view/edit.html');
   });
   
+  
   $f3->route('GET /delete', function($f3) {
     
+    deleteBlog($_GET['blogId']);
+    $route = "Location: http://jmccoy.greenrivertech.net/328/blogs/user-blogs?bloggerId=".$_SESSION['bloggerId'];
+    header("$route");
+    exit();
+  });
+  
+  $f3->route('POST /update', function($f3) {
+    updateBlog($_POST['blogId'], $_POST['title'], $_POST['blogEntry']);
     
+    $route = "Location: http://jmccoy.greenrivertech.net/328/blogs/user-blogs?bloggerId=".$_SESSION['bloggerId'];
+    header("$route");
+    exit();
   });
   
   $f3->route('GET /logout', function($f3){
     
     unset($_SESSION['bloggerId']);
     $_SESSION['guest'] = true;
-    header("Location: http://jmccoy.greenrivertech.net/328/blogs");
+    header("Location: http://jmccoy.greenrivertech.net/328/blogs/");
+    exit();
   });
   
   //Run fat-free

@@ -11,10 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     
-<!-- TODO: implement this
-    <link rel="shortcut icon" href="images/heart-icon.png"> -->
-
     <title>The Blog Site - Login</title>
+    <link rel="shortcut icon" href="images/trumpet.png">
     <meta name="description" content="A blogging site for Green River College class IT328">
     <meta name="author" content="Jonnathon McCoy">
     <meta name="viewport" content="width=device-width, initial-scale=1">

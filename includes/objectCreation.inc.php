@@ -6,7 +6,8 @@
     //create a new blogger object from the data
     $dbBlogger = new Blogger($blogger['bloggerId'], $blogger['username'], $blogger['name'],
                            $blogger['blogCount'], $blogger['mostRecentBlogId'],
-                           $blogger['profilePicPath'], $blogger['bio']);
+                           $blogger['mostRecentBlogDate'], $blogger['profilePicPath'],
+                           $blogger['bio']);
   
     //get the posts from that user from blogs database
     $postsResults = $GLOBALS['blogsDB']->getAllPosts($dbBlogger->getId());

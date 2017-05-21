@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap Example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    
+    <title>The Blog Site - My Blogs</title>
+    <link rel="shortcut icon" href="images/trumpet.png">
+    <meta name="description" content="A blogging site for Green River College class IT328">
+    <meta name="author" content="Jonnathon McCoy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!--Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
     <!--Custom stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
@@ -38,9 +49,9 @@
                   <repeat group="{{ @posts }}" value="{{ @post }}">
                     <tr>
                       <td>{{ @post->getTitle() }}</td>
-                      <td><a href="/328/blogs/edit?blogId={{ @post->getId }}">
+                      <td><a href="/328/blogs/edit?blogId={{ @post->getBlogId() }}">
                         <span class="glyphicon glyphicon-wrench"></span></a></td>
-                      <td><a href="/328/blogs/delete?blogId={{ @post->getId }}">
+                      <td><a href="/328/blogs/delete?blogId={{ @post->getBlogId() }}">
                         <span class="glyphicon glyphicon-remove"></span></a></td>
                     </tr>
                   </repeat>

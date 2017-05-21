@@ -5,14 +5,16 @@ class BlogPost
   private $_blogId,
     $_title,
     $_blogPost,
-    $_datePosted;
+    $_datePosted,
+    $_wordCount;
     
     function __construct($blogId=0, $title="", $blogPost="", $datePosted="")
     {
       $this->_blogId = $blogId;
       $this->_title = $title;
       $this->_blogPost = $blogPost;
-      $this->_datePosted = $datePosted;
+      $this->_datePosted = date('Y/m/d', strtotime($datePosted));
+      $this->_wordCount = str_word_count($blogPost);
     }
     
     function getBlogId()
@@ -53,5 +55,10 @@ class BlogPost
     function setDatePosted($datePosted)
     {
       $this->_datePosted = $datePosted;
+    }
+    
+    function getWordCount()
+    {
+      return $this->_wordCount;
     }
 }
