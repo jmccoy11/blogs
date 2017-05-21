@@ -33,6 +33,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
+    <!--Custom javaScript-->
+    <script src="js/blogs.js"></script>
+    
   </head>
   <body>
     <!-- Navbar -->
@@ -48,7 +51,7 @@
       </div>
       
       <div class="block">
-        <form action="/328/blogs/verify-new-user" method="POST">
+        <form action="/328/blogs/verify-new-user" method="POST" enctype="multipart/form-data">
             <div id="left-column" class="col-xs-6">
               <!--consider using this 
               <div class="form-group form-inline">
@@ -98,8 +101,11 @@
             <div id="right-column" class="col-xs-6">
               <div class="form-input-group">
                 <div class="form-input-field">
-                  <input id="profilePic" name="profilePic" placeholder=""
+                  <input id="filePath" name="filePath" value=""
                          type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <input class="hidden" id="profilePic" name="profilePic" placeholder=""
+                         type="file" class="col-xs-8" tabindex=1 autocomplete="off"
+                         onchange="updateFilePath();">
                   <label for="profilePic" class="col-xs-4">Upload Portait</label><br />
                 </div>
               </div>

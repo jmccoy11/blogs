@@ -104,6 +104,7 @@
   
   $f3->route('GET /user-blogs', function($f3) {
     
+    unsetFormData();
     loadNavbar($f3);
     $bloggers = createObjects($f3, "user");
     reversePosts($f3, $bloggers);

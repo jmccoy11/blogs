@@ -33,7 +33,7 @@
     
         <div class="col-sm-9">
           <div class="block">
-            <img src="images/user.png" alt="profile pic" />
+            <img src="{{ @bloggers[0]->getPath() }}" alt="profile pic" />
             <h1><strong>Your Blogs</strong></h1>
           </div>
           
@@ -61,10 +61,7 @@
           </div>
           
           <div class="block col-sm-4">
-            <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortor
-                sodales commodo. Nam sit amet elit et quam hendrerit tincidunt. Donec placerat justo eget justo
-                pulvinar, ut ultrices libero congue. Nunc non leo malesuada, varius odio eget, iaculis tellus.
-                Nullam vel sollicitudin lorem. </p>
+            <p>Bio: {{ @bloggers[0]->getBio() }}</p>
           </div>
         </div>
       </div>

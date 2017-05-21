@@ -9,10 +9,14 @@
   .card {
     padding: 1em;
     background: var(--grey);
+    min-height: 400px;
+    max-height: 400px;
   }
   
   .card img {
+    height: 50%;
     width: 100%;
+    max-height: 200px;
   }
   
   .blog-count {
