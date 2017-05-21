@@ -35,31 +35,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>The Words of Abraham Lincoln</td>
-                    <td><span class="glyphicon glyphicon-wrench"></span></td>
-                    <td><span class="glyphicon glyphicon-remove"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Renovating my house</td>
-                    <td><span class="glyphicon glyphicon-wrench"></span></td>
-                    <td><span class="glyphicon glyphicon-remove"></span></td>
-                  </tr>
-                  <tr>
-                    <td>The Mariners are losing again!</td>
-                    <td><span class="glyphicon glyphicon-wrench"></span></td>
-                    <td><span class="glyphicon glyphicon-remove"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Starbucks isn't what it used to be</td>
-                    <td><span class="glyphicon glyphicon-wrench"></span></td>
-                    <td><span class="glyphicon glyphicon-remove"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Taking a breather at work today</td>
-                    <td><span class="glyphicon glyphicon-wrench"></span></td>
-                    <td><span class="glyphicon glyphicon-remove"></span></td>
-                  </tr>
+                  <repeat group="{{ @posts }}" value="{{ @post }}">
+                    <tr>
+                      <td>{{ @post->getTitle() }}</td>
+                      <td><a href="/328/blogs/edit?blogId={{ @post->getId }}">
+                        <span class="glyphicon glyphicon-wrench"></span></a></td>
+                      <td><a href="/328/blogs/delete?blogId={{ @post->getId }}">
+                        <span class="glyphicon glyphicon-remove"></span></a></td>
+                    </tr>
+                  </repeat>
                 </tbody>
               </table>
             </div>

@@ -13,7 +13,7 @@ class Blogger
     
   private $_posts=array();
   
-  function __construct($bloggerId=0, $username="", $name = "", $blogCount=0,
+  function __construct($bloggerId=0, $username="", $name="", $blogCount=0,
                        $mostRecent=0, $profilePic="", $bio="")
   {
     
@@ -35,6 +35,11 @@ class Blogger
   function setId()
   {
     return $this->_bloggerId;
+  }
+  
+  function getUsername()
+  {
+    return $this->_username;
   }
   
   function getName()

@@ -64,6 +64,10 @@
     color: blue;
   }
   
+  .red {
+    color: red;
+  }
+  
   .page-container {
     margin: 1em 0 1em 0;
     padding: 0 1em 1em 1em;

@@ -41,6 +41,53 @@
       return $results;
     }
     
+    function addUser($blogger, $email, $password)
+    {
+      /*
+       * Insert into Users
+       */
+      //Define Query
+      $query = "INSERT INTO users (username, email, password)
+              VALUES (:username, :email, :password)";
+      
+      //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Bind Parameters
+      $statement->bindParam(':username', $blogger->getUsername(), PDO::PARAM_STR);
+      $statement->bindParam(':email', $email, PDO::PARAM_STR);
+      $statement->bindParam(':password', sha1($password), PDO::PARAM_STR);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      //Retrieve Results
+      $bloggerId = $this->_pdo->lastInsertId();
+      
+      /*
+       * Insert into bloggers
+       */
+      $query = "INSERT INTO bloggers VALUES (:bloggerId, :username, :name, :blogCount,
+        :mostRecentBlogId, :profilePicPath, :bio)";
+        
+      //Prepare statement
+      $statement = $this->_pdo->prepare($query);
+      
+      //Bind Parameters
+      $statement->bindParam(':bloggerId', $bloggerId, PDO::PARAM_INT);
+      $statement->bindParam(':username', $blogger->getUsername(), PDO::PARAM_STR);
+      $statement->bindParam(':name', $blogger->getName(), PDO::PARAM_STR);
+      $statement->bindParam(':blogCount', $blogger->getBlogCount(), PDO::PARAM_INT);
+      $statement->bindParam(':mostRecentBlogId', $blogger->getMostRecent(), PDO::PARAM_INT);
+      $statement->bindParam(':profilePicPath', $blogger->getPath(), PDO::PARAM_STR);
+      $statement->bindParam(':bio', $blogger->getBio(), PDO::PARAM_STR);
+      
+      //Execute Statement
+      $statement->execute();
+      
+      return $bloggerId;
+    }
+    
     function getBloggerById($bloggerId)
     {
       //Define Query
@@ -106,7 +153,8 @@
     {
       if($username == "" || $username == NULL)
       {
-        return array($username, false, -1);
+        //array( username, errorCode, userId )
+        return array($username, -1, -1);
       }
       
       $query = "SELECT userId, username FROM users";
@@ -119,13 +167,13 @@
       
       //Retrieve Results
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-      $valid = array($username, false, -2);
+      $valid = array($username, -2, -1);
       
       foreach($results as $row)
       {
         if($row['username'] == $username)
         {
-          $valid = array($username, false, 0, $row['userId']);
+          $valid = array($username, 0, $row['userId']);
         }
       }
       
@@ -146,13 +194,6 @@
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       $dbPassword = $results[0]['password'];
       
-      //echo "<pre>";
-      //echo var_dump($results);
-      //echo $dbPassword . "<br>";
-      //echo sha1($password) . "<br>";
-      //echo sha1($row['password']) . "<br>";
-      //echo "</pre>";
-      
       foreach($results as $row)
       {
         if($dbPassword == sha1($password))
@@ -161,6 +202,11 @@
         }
       }
       
-      return -3;
+      /*
+       *errorcode -1 is blank username,
+       *errorcode -2 is incorrect username,
+       *errorcode -3 is incorrect password
+       */
+      return -3; 
     }
   }

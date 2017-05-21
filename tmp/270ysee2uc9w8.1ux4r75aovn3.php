@@ -50,11 +50,11 @@
       </div>
       <div class="block">
         <div id="form" >
-          <form action="/328/blogs/verify" method="POST">
+          <form action="/328/blogs/verify-login" method="POST">
             <div id="form-input-group">
               <div class="form-input-field">
                 <input id="username" name="username" placeholder="<?= $usernameErr ?>"
-                       type="text" class="col-xs-9" tabindex=1 autocomplete="off">
+                       value="<?= $validUsername ?>" type="text" class="col-xs-9" tabindex=1 autocomplete="off">
                 <label for="username" class="col-xs-3">Username</label><br />
               </div>
               

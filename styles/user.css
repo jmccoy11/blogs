@@ -3,6 +3,7 @@
 
   .page-container img {
     display: block;
+    float: none;
     margin: 0 auto 15px auto;
     width: 100%;
   }

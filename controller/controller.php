@@ -1,5 +1,6 @@
 <?php
   
+    
   /*
    * Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
    * Date: 5/16/2017
@@ -11,6 +12,7 @@
   
   //require the autoload file
   require_once("vendor/autoload.php");
+  require_once("includes/controller-logic.inc.php");
   
   //start the session
   session_start();
@@ -29,24 +31,8 @@
   //Define a default route
   $f3->route('GET /', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
-     
-    //create the bloggers array to be pushed into
-    $bloggers = array();
-    
-    //pull contents from the blogger database
-    $dbResults = $GLOBALS['blogsDB']->getDBContents();
-    
-    include("includes/objectCreation.inc.php");
-    
-    //set $bloggers array as an f3 variable
-    $f3->set('bloggers' , $bloggers);
+    loadNavbar($f3);
+    createObjects($f3, "all");
     
     echo Template::instance()->render('view/home.html');
   });
@@ -55,33 +41,9 @@
   //define additional routes
   $f3->route('GET /user', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
-    
-    //will be populated by following include
-    $bloggers = array();
-    
-    //pull contents from the blogger database
-    $dbResults = $GLOBALS['blogsDB']->getBloggerById($_GET['id']);
-    
-    include("includes/objectCreation.inc.php");
-    
-    //reverse order the posts so they can be easily iterated through
-    $revPosts = array();
-    if(!empty($bloggers[0]->getPostsArray())){
-      $posts = $bloggers[0]->getPostsArray();
-      for($i = count($posts)-1; $i >= 0; $i--){
-        array_push($revPosts, $posts[$i]);
-      }
-    }
-    
-    $f3->set('blogger', $bloggers[0]);
-    $f3->set('posts', $revPosts);
+    loadNavbar($f3);
+    $bloggers = createObjects($f3, "user");
+    reversePosts($f3, $bloggers);
     
     echo Template::instance()->render('view/user.html');
   });
@@ -89,23 +51,8 @@
   
   $f3->route('GET /entry', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
-    
-    $dbResults = $GLOBALS['blogsDB']->getPostById($_GET['blogId']);
-    
-    foreach($dbResults as $row){
-      $post = new BlogPost($row['blogId'], $row['title'], $row['blogPost'],
-                           $row['datePosted']);
-    }
-    
-    $f3->set('profilePic', $dbResults[0]["profilePicPath"]);
-    $f3->set('post', $post);
+    loadNavbar($f3);
+    getEntry($f3);
     
     echo Template::instance()->render('view/entry.html');
   });
@@ -113,13 +60,7 @@
   
   $f3->route('GET /about', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
+    loadNavbar($f3);
     
     echo Template::instance()->render('view/about.html');
   });
@@ -127,109 +68,45 @@
   
   $f3->route('GET /login', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
-    
-    if(isSet($_SESSION['loginErr'])) {
-      if($_SESSION['loginErr']['loginErr'] == -1) {
-        $f3->set('usernameErr', 'Username cannot be blank.');
-      } else if($_SESSION['loginErr']['loginErr'] == -2) {
-        $f3->set('usernameErr', 'Username was incorrect.');
-      } else {
-        $f3->set('usernameErr', ' * username * ');
-      }
-      
-      if($_SESSION['loginErr']['loginErr'] == -3) {
-        $f3->set('passwordErr', 'Password was incorrect.');
-      } else {
-        $f3->set('passwordErr', ' * password * ');
-      }
-    }
-    
-    unset($_SESSION['loginErr']);
+    loadNavbar($f3);
+    loginErrors($f3);
     
     echo Template::instance()->render('view/login.html');
   });
   
     
-  $f3->route('POST /verify', function() {
+  $f3->route('POST /verify-login', function() {
       
+    $route = verifyLogin();
     
-    $loginToken = $GLOBALS['blogsDB']->checkUsername(trim
-                                                     (strip_tags
-                                                      (htmlspecialchars
-                                                       (stripslashes
-                                                        ($_POST['username'])))));
-    
-    if(isSet($loginToken)){
-      if (isSet($loginToken[0])) {
-        //Check error codes
-        if($loginToken[2] < 0) {
-          $loginErr = array("username" => $loginToken[0],
-                            "password" => $loginToken[1],
-                            "loginErr" => $loginToken[2]);
-          $_SESSION['loginErr'] = $loginErr;
-          
-          header("Location: http://jmccoy.greenrivertech.net/328/blogs/login");
-          exit();
-        }
-        
-        $passwordCheck = $GLOBALS['blogsDB']->checkPassword($loginToken[3],(trim
-                                                            (strip_tags
-                                                             (htmlspecialchars
-                                                              (stripslashes($_POST['password']))))));
-        if (isSet($passwordCheck)) {
-          if($passwordCheck == 0) {
-            $_SESSION['guest'] = false;
-          
-            header("Location: http://jmccoy.greenrivertech.net/328/blogs");
-            exit();
-          }
-        //}else{
-        //  echo "<pre>";
-        //  echo "something";
-        //  echo var_dump($loginToken);
-        //  echo "</pre>";
-          $loginErr = array("username" => $loginToken[0],
-                            "password" => $loginToken[1],
-                            "loginErr" => $passwordCheck);
-          $_SESSION['loginErr'] = $loginErr;
-          header("Location: http://jmccoy.greenrivertech.net/328/blogs/login");
-          exit();
-        }
-      }
-    }
+    header("$route");
+    exit();    
   });
   
   
   $f3->route('GET /new', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
+    loadNavbar($f3);
+    newUserErrors($f3);
     
     echo Template::instance()->render('view/new-user.html');
   });
   
   
+  $f3->route('POST /verify-new-user', function() {
+    
+    $route = verifyNewUser($f3);
+    
+    header("$route");
+    exit();
+  });
+  
+  
   $f3->route('GET /user-blogs', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
+    loadNavbar($f3);
+    $bloggers = createObjects($f3, "user");
+    reversePosts($f3, $bloggers);
     
     echo Template::instance()->render('view/user-blogs.html');
   });
@@ -237,20 +114,36 @@
   
   $f3->route('GET /create', function($f3) {
     
-    //set guest to session variable because F3 doesn't do it will
-    //and won't work without cache enabled
-    if(isSet($_SESSION['guest']) && $_SESSION['guest'] == false){
-      $f3->set('navbar', $GLOBALS['usernav']);
-    }else{
-      $f3->set('navbar', $GLOBALS['guestnav']);
-    }
+    loadNavbar($f3);
     
     echo Template::instance()->render('view/create.html');
   });
   
   
+  $f3->route('POST /insert', function($f3)) {
+    
+    $route = insertToDatabase();
+    
+    header("$route");
+    exit();
+  }
+  
+  
+  $f3->route('GET /edit', function($f3) {
+    
+    loadNavbar($f3);
+    
+    echo Template::instance()->render('view/edit.html');
+  });
+  
+  $f3->route('GET /delete', function($f3) {
+    
+    
+  });
+  
   $f3->route('GET /logout', function($f3){
     
+    unset($_SESSION['bloggerId']);
     $_SESSION['guest'] = true;
     header("Location: http://jmccoy.greenrivertech.net/328/blogs");
   });

@@ -50,7 +50,7 @@
       </div>
       
       <div class="block">
-        <form action="#" method="POST">
+        <form action="/328/blogs/verify-new-user" method="POST">
             <div id="left-column" class="col-xs-6">
               <!--consider using this 
               <div class="form-group form-inline">
@@ -62,13 +62,19 @@
               -->
               <div class="form-input-group">
                 <div class="form-input-field">
-                  <input id="username" name="username" placeholder=""
-                         type="text" class="col-xs-7" tabindex=1 autocomplete="off">
+                  <input id="name" name="name" placeholder="<?= $nameErr ?>" type="text"
+                         value="<?= $name ?>" class="col-xs-7" tabindex=1 autocomplete="off">
+                  <label for="name" class="col-xs-5">Name</label>
+                </div>
+                <div class="form-input-field">
+                  <input id="username" name="username" placeholder="<?= $usernameErr ?>"
+                         value="<?= $username ?>" type="text" class="col-xs-7" tabindex=1
+                         autocomplete="off">
                   <label for="username" class="col-xs-5">Username</label>
                 </div>
                 <div class="form-input-field">
-                  <input id="email" name="email" placeholder=""
-                         type="text" class="col-xs-7" tabindex=1 autocomplete="off">
+                  <input id="email" name="email" placeholder="<?= $emailErr ?>" type="text"
+                         value="<?= $email ?>" class="col-xs-7" tabindex=1 autocomplete="off">
                   <label for="email" class="col-xs-5">Email</label>
                 </div>
               </div>
@@ -79,14 +85,14 @@
               
               <div class="form-input-group">
                 <div class="form-input-field">
-                  <input id="password" name="password" placeholder=""
-                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
-                  <label for="password" class="col-xs-4">Password</label>
+                  <input id="password1" name="password1" placeholder="<?= $passwordErr ?>"
+                         type="password" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="password1" class="col-xs-4">Password</label>
                 </div>
                 <div class="form-input-field">
-                  <input id="verify" name="verify" placeholder=""
-                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
-                  <label for="verify" class="col-xs-4">Verify</label>
+                  <input id="password2" name="password2" placeholder=""
+                         type="password" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="password2" class="col-xs-4">Verify</label>
                 </div>
               </div>
             </div >
