@@ -45,7 +45,7 @@
         <div class="card-box col-md-4 col-sm-6"> <!-- card outer boxes to add margins -->
           <div class="card"> <!-- card inner boxes -->
           
-            <img src="{{ @value->getPath() }}" />
+            <a href="/328/blogs/user?bloggerId={{ @value->getId() }}"><img src="{{ @value->getPath() }}" /></a>
             <p class="center">{{ @value->getName() }}</p>
             
             <p class="top-bottom-border extend">
