@@ -21,7 +21,7 @@
       name                VARCHAR(40)   NOT NULL,
       blogCount           INT,
       mostRecentBlogId    INT,
-      mostRecentBlogDate  DATE,
+      mostRecentBlogDate  DATETIME,
       profilePicPath      VARCHAR(255),
       bio                 VARCHAR(1000),
       
@@ -52,7 +52,6 @@
    * @author     Jonnathon McCoy <jmccoy11@mail.greenriver.edu>
    * @copyright  2017
    * @version    1.0
-   */
    */
   class BlogsDB
   {

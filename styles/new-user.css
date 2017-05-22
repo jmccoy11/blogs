@@ -1,0 +1,108 @@
+/*
+ * Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
+ * Date: 5/17/2017
+ * Filename: new-user.css
+ * Description: Styles for new-user.html
+ */
+
+/* New Blogger Styles */
+  
+  textarea {
+    width:100%;
+    height: 135px;
+  }
+  
+  #left-column {
+    margin-top: 1em;
+    border-right: solid 1px var(--darkgrey);
+    max-height: 475px;
+  }
+  
+  #right-column {
+    margin-top: 1em;
+    max-height: 475px;
+  }
+  
+  #right-column .form-input-field {
+    background: none;
+    padding: 0;
+  }
+  
+  #right-column textarea {
+    height: 168px;
+  }
+  
+  #quick-bio {
+    width: 100%;
+  }
+  
+  .form-input-group {
+    overflow: auto;
+    width: 100%;
+  }
+  
+  .form-input-field {
+    overflow: auto;
+    padding: 5px;
+    background: var(--lightgrey);
+  }
+  
+  .form-input-field input {
+    height: 40px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .separator {
+    height: .5em;
+  }
+  
+  #submit-div {
+    clear: left;
+    text-align: center;
+  }
+  
+  #submit-button {
+    position: relative;
+    margin: 1em auto;
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    background: #76daaf;
+    border: solid 1px black;
+    border-radius: 10px;
+  }
+  
+  #filePath {
+    opacity: 0.75;
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    #right-column textarea {
+      height: 330px;
+    }
+  }
+  
+  @media screen and (min-width: 767px) and (max-width: 992px) {    
+    #left-column {
+      max-height: 800px;
+    }
+   }
+   
+   @media screen and (max-width: 992px) {    
+    .form-input-field input {
+      min-width: 75px;
+      font-size: 15px;
+    }
+   
+    
+    #right-column {
+      clear: left;
+    }
+    
+    #left-column {
+      border: none;
+    }
+   }
+   
+   

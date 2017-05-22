@@ -19,7 +19,7 @@ CREATE TABLE bloggers
   name                VARCHAR(40)   NOT NULL,
   blogCount           INT,
   mostRecentBlogId    INT,
-  mostRecentBlogDate  DATE,
+  mostRecentBlogDate  DATETIME,
   profilePicPath      VARCHAR(255),
   bio                 VARCHAR(1000),
   
@@ -57,13 +57,13 @@ VALUES
 
 INSERT INTO bloggers
 VALUES
-(1, 'jshmoe1', 'Joe Schmoe Blogger', 3, 3, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
-(2, 'jshmoe2', 'Joe Schmoe Blogger', 1, 4, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
-(3, 'jshmoe3', 'Joe Schmoe Blogger', 1, 5, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
-(4, 'jshmoe4', 'Joe Schmoe Blogger', 1, 6, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
-(5, 'jshmoe5', 'Joe Schmoe Blogger', 1, 7, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
-(6, 'jshmoe6', 'Joe Schmoe Blogger', 0, 0, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
-(7, 'jshmoe7', 'Joe Schmoe Blogger', 0, 0, '2017-5-19', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.');
+(1, 'jshmoe1', 'Joe Schmoe Blogger 1', 3, 3, '2017-5-19 12:00:00', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(2, 'jshmoe2', 'Joe Schmoe Blogger 2', 1, 4, '2017-5-19 12:00:01', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(3, 'jshmoe3', 'Joe Schmoe Blogger 3', 1, 5, '2017-5-19 12:00:02', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(4, 'jshmoe4', 'Joe Schmoe Blogger 4', 1, 6, '2017-5-19 12:00:03', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(5, 'jshmoe5', 'Joe Schmoe Blogger 5', 1, 7, '2017-5-19 12:00:04', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(6, 'jshmoe6', 'Joe Schmoe Blogger 6', 0, 0, '2017-5-19 12:00:05', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.'),
+(7, 'jshmoe7', 'Joe Schmoe Blogger 7', 0, 0, '2017-5-19 12:00:06', 'images/user.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam et tortorsodales commodo.');
 
 INSERT INTO blogs
 (title, blogPost, datePosted, wordCount)

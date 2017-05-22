@@ -1,6 +1,22 @@
+/*
+ * Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
+ * Date: 5/17/2017
+ * Filename: entry.css
+ * Description: Styles for entry.html
+ */
 
 /* Entry Styles */
   
+   @media screen and (max-width: 767px) {
+    #entry h1 {
+      clear: right;
+    }
+    #entry img {
+      margin-right: 16%;
+      margin-bottom: 20px;
+    }
+   }
+   
   #entry {
     background: var(--grey);
     margin: 0 15px 15px 15px;;
@@ -13,4 +29,6 @@
     width: 40%;
     min-width: 200px;
     max-width: 400px;
+    max-height: 300px;
+    padding-left: 10px;
   }

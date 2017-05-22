@@ -514,7 +514,7 @@
     
     //grab the bloggerId
     $bloggerId = $_SESSION['bloggerId'];
-    $blogPost = new BlogPost(0, $title, $blogEntry, date("Y-m-d"));
+    $blogPost = new BlogPost(0, $title, $blogEntry, date('Y-m-d H:i:s'));
     
     //send the bloggerId and the BlogPost object to the database
     $GLOBALS['blogsDB']->addBlog($bloggerId, $blogPost);
@@ -582,7 +582,7 @@
     }
     
     //create BlogPost
-    $blogPost = new BlogPost($blogId, $title, $blogEntry, date('Y-m-d'));
+    $blogPost = new BlogPost($blogId, $title, $blogEntry, date('Y-m-d H:i:s'));
   
     //send to database
     $GLOBALS['blogsDB']->updateBlog($blogPost);

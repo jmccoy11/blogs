@@ -56,7 +56,7 @@ class BlogPost
       $this->_blogId = $blogId;
       $this->_title = $title;
       $this->_blogPost = $blogPost;
-      $this->_datePosted = date('Y/m/d', strtotime($datePosted));
+      $this->_datePosted = date('Y-m-d H:i:s', strtotime($datePosted));
       $this->_wordCount = str_word_count($blogPost);
     }
     

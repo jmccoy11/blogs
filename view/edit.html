@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+      Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
+      Date: 5/17/2017
+      Filename: edit.html
+      Description: A blogging site for Green River College class IT328
+  -->
+  
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -65,10 +72,10 @@
               <div id="submit-div" class="center">
                 <input id="submit-button" type="submit" value="Save" />
               </div>
-            </form>
-          </div>
+            </form> <!-- END form -->
+          </div> <!-- END .block -->
         </div>
-      </div>
-    </div>
+      </div> <!-- END row -->
+    </div><!-- END page-container -->
   </body>
 </html>

@@ -3,7 +3,7 @@
   <!--
       Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
       Date: 5/16/2017
-      Filename: about.html
+      Filename: new-user.html
       Description: A blogging site for Green River College class IT328
   -->
   
@@ -19,14 +19,14 @@
     
     <!--Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     
     <!--Custom stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/new-blogger.css">
+    <link rel="stylesheet" href="styles/new-user.css">
     
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -38,45 +38,38 @@
     
   </head>
   <body>
-    <!-- Navbar -->
-    <?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
-    
-    <!-- Blog entry -->
-    <div class="row col-sm-9 page-container">
-      <div class="block">
-        <img src="images/writing.png" alt="Blog Logo" />
-        <h1><strong>Become a Blogger!</strong></h1>
-        <br />
-        <h3>Create a new account below</h3>
-      </div>
+      <!-- Navbar -->
+      <?php echo $this->render($navbar,NULL,get_defined_vars(),0); ?>
       
-      <div class="block">
-        <form action="/328/blogs/verify-new-user" method="POST" enctype="multipart/form-data">
-            <div id="left-column" class="col-xs-6">
-              <!--consider using this 
-              <div class="form-group form-inline">
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="username" name="username">
-                </div>
-                <label class="control-label col-sm-2" for="username">Username</label>
-              </div>
-              -->
+      <!-- Bloger entry -->
+    
+      <div class="row col-sm-9 page-container">
+        <div class="block">
+          <img src="images/writing.png" alt="Blog Logo" />
+          <h1><strong>Become a Blogger!</strong></h1>
+          <br />
+          <h3>Create a new account below</h3>
+        </div>
+        
+        <div class="block">
+          <form action="/328/blogs/verify-new-user" method="POST" enctype="multipart/form-data">
+            <div id="left-column" class="col-md-6 col-xs-12">
               <div class="form-input-group">
                 <div class="form-input-field">
                   <input id="name" name="name" placeholder="<?= $nameErr ?>" type="text"
-                         value="<?= $name ?>" class="col-xs-7" tabindex=1 autocomplete="off">
-                  <label for="name" class="col-xs-5">Name</label>
+                         value="<?= $name ?>" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="name" class="col-xs-4">Name</label>
                 </div>
                 <div class="form-input-field">
                   <input id="username" name="username" placeholder="<?= $usernameErr ?>"
-                         value="<?= $username ?>" type="text" class="col-xs-7" tabindex=1
+                         value="<?= $username ?>" type="text" class="col-xs-8" tabindex=1
                          autocomplete="off">
-                  <label for="username" class="col-xs-5">Username</label>
+                  <label for="username" class="col-xs-4">Username</label>
                 </div>
                 <div class="form-input-field">
                   <input id="email" name="email" placeholder="<?= $emailErr ?>" type="text"
-                         value="<?= $email ?>" class="col-xs-7" tabindex=1 autocomplete="off">
-                  <label for="email" class="col-xs-5">Email</label>
+                         value="<?= $email ?>" class="col-xs-8" tabindex=1 autocomplete="off">
+                  <label for="email" class="col-xs-4">Email</label>
                 </div>
               </div>
               
@@ -96,17 +89,20 @@
                   <label for="password2" class="col-xs-4">Verify</label>
                 </div>
               </div>
-            </div >
+            </div > <!-- END left-column -->
             
-            <div id="right-column" class="col-xs-6">
+            <div id="right-column" class="col-md-6 col-xs-12">
               <div class="form-input-group">
-                <div class="form-input-field">
+                <div class="form-input-field center-block">
                   <input id="filePath" name="filePath" value=""
-                         type="text" class="col-xs-8" tabindex=1 autocomplete="off">
+                         type="text" class="col-xs-8" tabindex=1 autocomplete="off" readonly>
                   <input class="hidden" id="profilePic" name="profilePic" placeholder=""
                          type="file" class="col-xs-8" tabindex=1 autocomplete="off"
                          onchange="updateFilePath();">
-                  <label for="profilePic" class="col-xs-4">Upload Portait</label><br />
+                  <div>
+                    <label id="profilePicLabel" for="profilePic" class="col-xs-4">Upload Portait</label><br />
+                  </div>
+                  
                 </div>
               </div>
               
@@ -122,18 +118,16 @@
                     <p></p>
                   </div>
                   
-                  <textarea id="bio" name="bio"></textarea>
+                  <textarea id="bio" name="bio" tabindex=1></textarea>
                 </div>
               </div>
+            </div> <!-- END right-column -->
+  
+            <div id="submit-div">
+              <input id="submit-button" type="submit" value="Start Blogging!" />
             </div>
-
-          <div id="submit-div">
-            <input id="submit-button" type="submit"
-                 value="Start Blogging!" />
-          </div>
-          
-        </form>
-      </div>
-    </div>
+          </form> <!-- END form -->
+        </div> <!-- END .block -->
+      </div> <!-- END page-container -->
   </body>
 </html>

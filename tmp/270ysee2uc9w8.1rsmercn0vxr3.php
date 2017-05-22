@@ -1,3 +1,10 @@
+<!--
+      Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
+      Date: 5/18/2017
+      Filename: navbar-user.inc.html
+      Description: Side Nav bar for a logged in user
+  -->
+
 <div class="col-sm-3 sidenav">
   <div id="navbar" class="nav nav-pills nav-stacked">
     <nav>

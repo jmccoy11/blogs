@@ -1,4 +1,7 @@
 <?php
+  /**
+   * Include for creating the Bloggers and BlogPosts
+   */
   
   //for each line in the in the query
   foreach($dbResults as $blogger)

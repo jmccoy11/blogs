@@ -1,3 +1,9 @@
+/*
+ * Author: Jonnathon McCoy (jmccoy11@mail.greenriver.edu)
+ * Date: 5/17/2017
+ * Filename: main.css
+ * Description: Styles for all pages
+ */
 
 /* Main Styles */
 
@@ -11,32 +17,62 @@
   }
   
   /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: white;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
-
+  .row.content {height: 1500px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background-color: white;
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
 
 /* Body Styles */
+
+  /* Generic */
+  label {
+    height: 30px;
+    min-width: 110px;
+    width: 1vw;
+    height: 40px;
+    padding: 0;
+    padding-top: 8px; 
+    background: var(--grey);
+    border: solid 2px var(--lightgrey);
+    font-size: 15px;
+    font-size: calc(1px + 1vw);
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+   nav h2 {
+    text-align: center;
+  }
+  
+  nav img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 75%;
+  }
+  
+  nav ul {
+    padding: 1em;
+  }
+  
+  nav li {
+    font-weight: bold;
+    list-style: none;
+  }
+  
+  
   /* Classes */
   .top-bottom-border {
     /* padding: 5px 1em 5px 1em;
@@ -54,6 +90,10 @@
   .extend {
     margin: 0 -1em 5px -1em;
     padding: 5px 1em 5px 1em;
+  }
+  
+  .extend-left {
+    padding-left: 0;
   }
   
   .center {
@@ -92,30 +132,77 @@
   #navbar {
     overflow: auto;
     background-color: var(--grey);
-    margin-top: 1em;
+    margin-top: 2em;
     padding: 1em 0;
     height: 100%;
   }
   
-  nav h2 {
-    text-align: center;
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 576px) {
+    
+    label {
+      font-size: 12px;
+      min-width: 75px;
+      max-width: 100px;
+    }
+    
+    #navbar {
+      max-width: 100%;
+    }
+    
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {
+      height: auto;
+      }
+    .block {
+      clear: left;
+      margin: auto;
+    }
+    .page-container {
+      width: 425px;
+      margin: auto;
+    }
   }
   
-  nav img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    height: 75%;
+  @media screen and (max-width: 767px) {
+    label {
+      font-size: 14px;
+    }
+    #profilePicLabel {
+      font-size: 10px;
+      padding-top: 5px;
+    }
+    
+    #quick-bio {
+      max-width: 100%;
+    }
   }
-  
-  nav ul {
-    padding: 1em;
+  @media screen and (min-width: 767px) and (max-width: 991px) {
+    label {
+      font-size: 14px;
+    }
+    #profilePicLabel {
+      width: 125px;
+    }
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    #navbar {
+      margin-top: 0;
+    }
+    .row.content {
+      height: auto;
+      }
+    .block {
+      margin-top: 0;
+      clear: left;
+    }
+    .page-container {
+      max-width: 550px;
+      margin: auto;
+    }
   }
-  
-  nav li {
-    font-weight: bold;
-    list-style: none;
-  }
-  
-  

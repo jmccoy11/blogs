@@ -1819,3 +1819,7 @@
 [21-May-2017 22:08:51 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
 [21-May-2017 22:08:51 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
 [21-May-2017 22:08:51 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 22:15:01 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 22:15:01 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 22:15:01 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 22:15:01 America/Chicago] [328/blogs/index.php:3] require_once()
