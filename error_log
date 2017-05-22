@@ -1771,3 +1771,51 @@
 [21-May-2017 17:11:51 America/Chicago] [328/blogs/controller/controller.php:35] createObjects()
 [21-May-2017 17:11:51 America/Chicago] [328/blogs/controller/controller.php:167] Base->run()
 [21-May-2017 17:11:51 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:11:34 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:11:34 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:11:34 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:11:34 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:11:41 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:11:41 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:11:41 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:11:41 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:13:06 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:13:06 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:13:06 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:13:06 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:18:11 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:18:11 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:18:11 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:18:11 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:35:45 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:35:45 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:35:45 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:35:45 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:46:32 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:46:32 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:46:32 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:46:32 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:50:06 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:50:06 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:50:06 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:50:06 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 21:58:25 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 21:58:25 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 21:58:25 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 21:58:25 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 22:05:22 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 22:05:22 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 22:05:22 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 22:05:22 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 22:05:26 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 22:05:26 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 22:05:26 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 22:05:26 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 22:07:24 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 22:07:24 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 22:07:24 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 22:07:24 America/Chicago] [328/blogs/index.php:3] require_once()
+[21-May-2017 22:08:51 America/Chicago] syntax error, unexpected '*', expecting end of file [/home/jmccoy/public_html/328/blogs/model/blogsdb.php:56]
+[21-May-2017 22:08:51 America/Chicago] [328/blogs/vendor/composer/ClassLoader.php:322] Composer\Autoload\includeFile()
+[21-May-2017 22:08:51 America/Chicago] [328/blogs/controller/controller.php:23] spl_autoload_call()
+[21-May-2017 22:08:51 America/Chicago] [328/blogs/index.php:3] require_once()

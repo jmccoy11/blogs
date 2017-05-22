@@ -191,7 +191,7 @@
     /**
      * Setter the most recent post made by this blogger to the id passed to the function
      *
-     * @param int   Blog id for the most recent post made by this blogger
+     * @param int   $mostRecentBlogId   Blog id for the most recent post made by this blogger
      * @access public
      */
     function setMostRecent($mostRecentBlogId)
@@ -237,7 +237,7 @@
     /**
      * Setter for the file path for the blogger's profile picture
      *
-     * @param string  filepath name for the blogger's profile picture
+     * @param string  $profilePicPath     filepath name for the blogger's profile picture
      * @access public
      */
     function setPath($profilePicPath)
@@ -267,7 +267,7 @@
     /**
      * Setter for the blogger's biography
      *
-     * @param string   The new blogger's biography
+     * @param string   $bio   The new blogger's biography
      */
     function setBio($bio)
     {
@@ -298,7 +298,7 @@
     /**
      * Add post to the posts array
      *
-     * @param BlogPost  Blog post to push to the posts array.
+     * @param BlogPost  $blogPost     Blog post to push to the posts array.
      * @access public
      */
     function addPost($blogPost)

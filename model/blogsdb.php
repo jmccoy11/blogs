@@ -1,9 +1,73 @@
 <?php
-
+  /**
+   * Provides CRUD access to My Dating Website Database
+   *
+   * PHP version 5
+   *
+   * Table creation sql query:
+   *
+    CREATE TABLE users
+    (
+      userId        INT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      username      VARCHAR(40)  NOT NULL,
+      email         VARCHAR(255)  NOT NULL,
+      password      VARCHAR(50)   NOT NULL
+    );
+    
+    CREATE TABLE bloggers
+    (
+      bloggerId           INT NOT NULL PRIMARY KEY,
+      username            VARCHAR(40)   NOT NULL,
+      name                VARCHAR(40)   NOT NULL,
+      blogCount           INT,
+      mostRecentBlogId    INT,
+      mostRecentBlogDate  DATE,
+      profilePicPath      VARCHAR(255),
+      bio                 VARCHAR(1000),
+      
+      FOREIGN KEY (bloggerId) REFERENCES users(userId)
+    );
+    
+    CREATE TABLE blogs
+    (
+      blogId      INT   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      title       VARCHAR(255),
+      blogPost    VARCHAR(1000),
+      datePosted  DATE,
+      wordCount   INT
+    );
+    
+    CREATE TABLE blogger_to_blogs_junct
+    (
+      bloggerId   INT,
+      blogId      INT,
+      
+      FOREIGN KEY (bloggerId) REFERENCES bloggers(bloggerId),
+      FOREIGN KEY (blogId) REFERENCES blogs(blogId)
+    );
+    
+    
+   * @category   CategoryName
+   * @package    PackageName
+   * @author     Jonnathon McCoy <jmccoy11@mail.greenriver.edu>
+   * @copyright  2017
+   * @version    1.0
+   */
+   */
   class BlogsDB
   {
+    /**
+     * PHP Data Object
+     */
     private $_pdo;
     
+    // {{{ __construct()
+    
+    /**
+     * Constructor for the DatingDB Class
+     *
+     * @access public
+     */
     function __construct()
     {
         //Require configuration file
@@ -24,6 +88,18 @@
         }
     }
     
+    //}}}
+    
+    //{{{ getDBContents()
+    
+    /**
+     * Retrieve the bloggers from the database and order them by the
+     * most recent posting date
+     *
+     * @return Array  Returns all the bloggers from the database ordered
+     * by the most recent posting date
+     * @access public
+     */
     function getDBContents()
     {
       //Define Query
@@ -41,6 +117,21 @@
       return $results;
     }
     
+    //}}}
+    
+    //{{{ addUser()
+    
+    /**
+     * Adds a new user to the users table and inserts a new Blogger into
+     * the bloggers table
+     *
+     * @param  Blogger   $blogger      Blogger object with the necessary data to create a new
+     *                                 default blogger object in the database
+     * @param  string    $email        Email address for the user
+     * @param  string    $password     unencrypted password
+     * @return int       The ID created by the database for the new Blogger
+     * @access public
+     */
     function addUser($blogger, $email, $password)
     {
       /*
@@ -90,6 +181,17 @@
       return $bloggerId;
     }
     
+    //}}}
+    
+    //{{{ addBlog()
+    
+    /**
+     * Add a new Blog to the blogs table and add to the bloggers_to_blogs_junct table
+     *
+     * @param   int       $bloggerId      Blogger Id.
+     * @param   BlogPost  $blogPost       BlogPost Object with the necessary data
+     * @access public
+     */
     function addBlog($bloggerId, $blogPost)
     {
       $query = "INSERT INTO blogs (title, blogPost, datePosted, wordCount)
@@ -103,7 +205,6 @@
       $statement->bindParam(':blogPost', $blogPost->getPost(), PDO::PARAM_STR);
       $statement->bindParam(':datePosted', $blogPost->getDatePosted(), PDO::PARAM_STR);
       $statement->bindParam(':wordCount', $blogPost->getWordCount(), PDO::PARAM_INT);
-      
       
       //Execute Statement
       $statement->execute();
@@ -137,6 +238,16 @@
       $statement->execute();
     }
     
+    //}}}
+    
+    //{{{ updateBlog()
+    
+    /**
+     * Update the blogPost with a new title and/or blog data.
+     *
+     * @param   BlogPost    $blogPost     The new blogPost object that contains the necessary data
+     * @access public
+     */
     function updateBlog($blogPost) {
       
       $query = "UPDATE blogs SET
@@ -156,6 +267,17 @@
       $statement->execute();
     }
     
+    //}}}
+    
+    //{{{ getBloggerId()
+    
+    /*
+     * Get the blogger by the blogger's id.
+     *
+     * @param   int    $bloggerId      Blogger's Id.
+     * @return  Array  Row data that matches the blogger
+     * @access public
+     */    
     function getBloggerById($bloggerId)
     {
       //Define Query
@@ -173,6 +295,17 @@
       return $results;
     }
     
+    //}}}
+    
+    //{{{ getAllPosts()
+    
+    /**
+     * Get all the posts that belong to a blogger.
+     *
+     * @param     int     $bloggerId      Blogger's Id
+     * @return    Array   Returns rows of posts that match the blogger's Id
+     * @access public
+     */
     function getAllPosts($bloggerId)
     {
       //Define Query
@@ -194,6 +327,17 @@
       return $results;
     }
     
+    //}}}
+    
+    //{{{ getPostById
+    
+    /**
+     * Get Post that matches it's blogId.
+     *
+     * @param     int     $blogId      The BlogPost's Id
+     * @return    Array   The Row that matches the Blog's Id.
+     * @access public
+     */    
     function getPostByID($blogId)
     {
       //Define query
@@ -218,6 +362,16 @@
       return $results;
     }
     
+    //}}}
+    
+    //{{{ deleteBlog()
+    
+    /**
+     * Delete blog by it's blog id.
+     *
+     * @param   int     $blogId     Blog's Id
+     * @access public 
+     */
     function deleteBlog($blogId)
     {
       //Define query
@@ -261,10 +415,29 @@
       
       //Execute Statement
       $statement->execute();
-      
-      
     }
     
+    //}}}
+    
+    //{{{ checkUsername()
+    
+    /**
+     * Check that the username is not blank or NULL. If username is blank or null,
+     * return an array with the username, an error code of -1, and a -1 for the userId.
+     *
+     * Then check if the username equals one in the database. If this check returns true,
+     * return an array with the username, the error code of 0, and the userId.
+     *
+     * Otherwise, return the username, an error Code of -2, and a -1 for the userId.
+     *
+     * These two error codes can be evaluated to mean username is empty, null, or does
+     * not exist in the database.
+     *
+     * @param   string    $username    the username to search the database for
+     * @return  Array     Returns the username, an error code of 0, -1, or -2, and the userId
+     *                    which may be -1 if username was empty or wasn't found in the database
+     * @access public
+     */
     function checkUsername($username)
     {
       if($username == "" || $username == NULL)
@@ -296,6 +469,19 @@
       return $valid;
     }
     
+    //}}}
+    
+    //{{{ checkPassword()
+    
+    /**
+     * Checks that the password matches the one stored for the bloggerId
+     *
+     * @param   int     $bloggerId     bloggerId of the blogger attempting to sign in
+     * @param   string  $password      the password to be checked
+     * @return  int     if the password matches the one in the database for the
+     *                  bloggerId, return a zero, else return a -3.
+     * @access public
+     */
     function checkPassword($bloggerId, $password)
     {
       $query = "SELECT userId, password FROM users WHERE userId = $bloggerId";
@@ -310,6 +496,7 @@
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       $dbPassword = $results[0]['password'];
       
+      //compare the passwords and encrypt the password with sha1
       foreach($results as $row)
       {
         if($dbPassword == sha1($password))
@@ -325,4 +512,6 @@
        */
       return -3; 
     }
+    
+    //}}}
   }
