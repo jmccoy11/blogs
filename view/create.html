@@ -45,7 +45,7 @@
             <img src="images/writing.png" alt="profile pic" />
             <h1><strong>What's on your mind?</strong></h1>
             <br />
-            <h3></h3>
+            <br />
           </div>
           
           <div class="block">
@@ -54,7 +54,7 @@
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="title" name="title">
                 </div>
-                <label class= "control-label col-sm-2 box" for="title">Title</label>
+                <label for="title">Title</label>
               </div>
               
               <div class="box title-box center">

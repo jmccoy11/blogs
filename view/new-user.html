@@ -94,10 +94,9 @@
             <div id="right-column" class="col-md-6 col-xs-12">
               <div class="form-input-group">
                 <div class="form-input-field center-block">
-                  <input id="filePath" name="filePath" value=""
-                         type="text" class="col-xs-8" tabindex=1 autocomplete="off" readonly>
-                  <input class="hidden" id="profilePic" name="profilePic" placeholder=""
-                         type="file" class="col-xs-8" tabindex=1 autocomplete="off"
+                  <input id="filePath" name="filePath" value="" type="text" class="col-xs-8" tabindex=1
+                         autocomplete="off" readonly>
+                  <input class="hidden" id="profilePic" name="profilePic" type="file" tabindex=1
                          onchange="updateFilePath();">
                   <div>
                     <label id="profilePicLabel" for="profilePic" class="col-xs-4">Upload Portait</label><br />
